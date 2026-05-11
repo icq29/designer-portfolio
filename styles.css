@@ -577,24 +577,28 @@ body {
   color: var(--color-grey);
 }
 
+.case-lenta {
+  --lenta-slide-gap: 12px;
+  --lenta-cell-h: 424px;
+  --lenta-track-inner: calc(
+    958px + var(--lenta-slide-gap) + 636px + var(--lenta-slide-gap) + 478px + var(--lenta-slide-gap) + 958px
+  );
+  --lenta-shift: calc(var(--lenta-track-inner) + var(--lenta-slide-gap));
+  width: 100%;
+  overflow: hidden;
+}
+
 @keyframes case-lenta-marquee {
   from {
     transform: translateX(0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-1 * var(--lenta-shift)));
   }
 }
 
-.case-lenta {
-  width: 100%;
-  overflow: hidden;
-}
-
 .case-lenta-viewport {
-  container-type: inline-size;
-  container-name: case-lenta;
   width: 100%;
   overflow: hidden;
 }
@@ -604,51 +608,45 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: stretch;
-  gap: 0;
-  width: 200%;
+  gap: var(--lenta-slide-gap);
+  width: max-content;
   will-change: transform;
   animation: case-lenta-marquee 22s linear infinite;
 }
 
 .case-lenta-track {
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: 958fr 636fr 478fr 958fr;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: stretch;
-  gap: 12px;
-  width: 50%;
-  flex: 0 0 50%;
-  min-width: 0;
-  min-height: clamp(180px, 28cqi, 424px);
-}
-
-@supports (width: 1cqi) {
-  @keyframes case-lenta-marquee {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(calc(-100cqi - 12px));
-    }
-  }
-
-  .case-lenta-marquee {
-    gap: 12px;
-    width: max-content;
-  }
-
-  .case-lenta-track {
-    width: 100cqi;
-    flex: 0 0 100cqi;
-  }
+  gap: var(--lenta-slide-gap);
+  width: var(--lenta-track-inner);
+  flex: 0 0 var(--lenta-track-inner);
+  height: var(--lenta-cell-h);
 }
 
 .case-lenta-cell {
-  min-width: 0;
-  min-height: 0;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: var(--lenta-cell-h);
   overflow: hidden;
   background: var(--color-gray-100);
+}
+
+.case-lenta-cell--958 {
+  width: 958px;
+  flex: 0 0 958px;
+}
+
+.case-lenta-cell--636 {
+  width: 636px;
+  flex: 0 0 636px;
+}
+
+.case-lenta-cell--478 {
+  width: 478px;
+  flex: 0 0 478px;
 }
 
 .case-lenta-cell img {
@@ -660,18 +658,15 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .case-lenta-marquee {
-    width: 100%;
-    max-width: 100%;
-    animation: none;
-    transform: none;
-    gap: 0;
+  .case-lenta-viewport {
+    overflow-x: auto;
   }
 
-  .case-lenta-track {
-    width: 100%;
-    max-width: 100%;
-    flex: 0 0 100%;
+  .case-lenta-marquee {
+    width: max-content;
+    max-width: none;
+    animation: none;
+    transform: none;
   }
 
   .case-lenta-track--clone {
