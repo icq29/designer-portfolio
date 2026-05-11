@@ -241,6 +241,8 @@ body {
 
 .case-title {
   margin: 0;
+  flex: 0 0 auto;
+  box-sizing: border-box;
   width: 801px;
   max-width: 100%;
   font-family: var(--font-halvar);
