@@ -244,6 +244,75 @@ body {
   width: 100%;
 }
 
+.case-top .header,
+.hero .header {
+  padding: 16px;
+}
+
+.case-top .header .header-brand,
+.hero .header .header-brand {
+  width: 168px;
+}
+
+.case-top .header .header-actions,
+.hero .header .header-actions {
+  width: auto;
+  gap: 42px;
+}
+
+.case-top .header .main-nav a.flip-link,
+.case-top .header .header-actions a.cv-link,
+.hero .header .main-nav a.flip-link,
+.hero .header .header-actions a.cv-link {
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.52px;
+}
+
+.case-top .header .flip-link,
+.hero .header .flip-link {
+  height: auto;
+  line-height: 1;
+  min-height: 15px;
+}
+
+.case-top .header .main-nav .flip-link__face--front,
+.case-top .header .main-nav .flip-link__face--back,
+.case-top .header .cv-link .flip-link__face--front,
+.case-top .header .cv-link .flip-link__face--back,
+.hero .header .main-nav .flip-link__face--front,
+.hero .header .main-nav .flip-link__face--back,
+.hero .header .cv-link .flip-link__face--front,
+.hero .header .cv-link .flip-link__face--back {
+  color: var(--color-grey);
+}
+
+.case-top .header .telegram-btn.telegram-btn--component,
+.hero .header .telegram-btn.telegram-btn--component {
+  height: auto;
+  min-height: 0;
+  gap: 8px;
+  padding: 12px 14px 12px 12px;
+}
+
+.case-top .header .telegram-btn--component span,
+.hero .header .telegram-btn--component span {
+  font-size: 13px;
+  letter-spacing: 0.52px;
+}
+
+.case-top .header .telegram-icon-wrap,
+.hero .header .telegram-icon-wrap {
+  width: 14px;
+  height: 14px;
+}
+
+.case-top .header .telegram-icon-wrap .telegram-icon,
+.hero .header .telegram-icon-wrap .telegram-icon {
+  width: 14px;
+  height: 14px;
+}
+
 .case-cover {
   box-sizing: border-box;
   display: flex;
