@@ -201,7 +201,7 @@ body {
 }
 
 .header.header--case-scroll .header-brand {
-  width: 168px;
+  width: 176px;
 }
 
 .header.header--case-scroll .header-actions {
@@ -781,7 +781,7 @@ body {
 }
 
 .header-brand {
-  width: 207px;
+  width: 176px;
   display: flex;
   align-items: center;
 }
