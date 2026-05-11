@@ -130,10 +130,6 @@ body {
   align-items: stretch;
 }
 
-.container--case {
-  gap: 52px;
-}
-
 .header {
   min-height: 56px;
   background: var(--color-white);
