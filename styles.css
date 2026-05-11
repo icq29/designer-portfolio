@@ -881,12 +881,12 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 13px;
+  gap: 12px;
   height: 46px;
   border-radius: var(--radius-pill);
   background: var(--color-black);
   color: var(--color-white);
-  padding: 0 20px 0 15px;
+  padding: 0 18px 0 15px;
   border: 1px solid transparent;
   transition:
     background-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
@@ -901,8 +901,8 @@ a {
 .telegram-btn--size-sm {
   height: auto;
   min-height: 0;
-  gap: 12px;
-  padding: 12px 18px 12px 12px;
+  gap: 10px;
+  padding: 12px 16px 12px 12px;
 }
 
 .telegram-btn--size-sm.telegram-btn--component {
@@ -920,12 +920,12 @@ a {
   height: 14px;
 }
 
-/* Header / dock: Small padding (Figma 451:7857, 564:465); gap иконка–текст 12px */
+/* Small buttons baseline (Black, from 563:452): gap 10, pr 16 */
 .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--size-lg) {
   height: auto;
   min-height: 0;
-  gap: 12px;
-  padding: 12px 18px 12px 12px;
+  gap: 10px;
+  padding: 12px 16px 12px 12px;
   width: auto;
 }
 
@@ -940,7 +940,7 @@ a {
   height: 14px;
 }
 
-/* Светлый хедер: фикс. ширина под small + gap 12 (ранее 108 при gap 8) */
+/* Small Black in light headers (563:452 / 605:191): width 116 */
 .hero .header .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--light),
 .case-top .header .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--light) {
   width: 116px;
@@ -1025,22 +1025,24 @@ a {
 }
 
 .header.header--case-scroll .telegram-btn.telegram-btn--component.telegram-btn--light {
-  background: #2c2c2c;
+  background: var(--color-white);
   border-color: transparent;
   width: 116px;
   box-sizing: border-box;
+  gap: 12px;
+  padding: 12px 18px 12px 12px;
 }
 
 .header.header--case-scroll .telegram-btn--light > span:not(.telegram-icon-wrap) {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .header.header--case-scroll .telegram-btn--light .telegram-icon--default {
-  opacity: 0;
+  opacity: 1;
 }
 
 .header.header--case-scroll .telegram-btn--light .telegram-icon--hover {
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Dock light Telegram — Figma 595:438 hover, 604:192 pressed (Small White) */
