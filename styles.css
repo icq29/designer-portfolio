@@ -201,7 +201,7 @@ body {
 }
 
 .header.header--case-scroll .header-brand {
-  width: 168px;
+  width: 172px;
 }
 
 .header.header--case-scroll .header-actions {
@@ -245,10 +245,10 @@ body {
   width: 100%;
 }
 
-/* Figma 451:7857 — сетка: logo 168 | nav по центру (flex:1) | actions gap 42; Telegram small: gap иконка–текст 12px, ширина 112px */
+/* Хедер: logo-блок 172px | nav по центру (flex:1) | actions gap 42; Telegram small gap 12px, ширина 112px */
 .case-top .header .header-brand,
 .hero .header .header-brand {
-  width: 168px;
+  width: 172px;
   flex-shrink: 0;
 }
 
