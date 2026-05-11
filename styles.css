@@ -245,7 +245,7 @@ body {
   width: 100%;
 }
 
-/* Figma 451:7857 — сетка: logo 168 | nav по центру (flex:1) | actions gap 42, Telegram 108px */
+/* Figma 451:7857 — сетка: logo 168 | nav по центру (flex:1) | actions gap 42; Telegram small: gap иконка–текст 12px, ширина 112px */
 .case-top .header .header-brand,
 .hero .header .header-brand {
   width: 168px;
@@ -876,7 +876,7 @@ a {
   transform: rotateX(180deg);
 }
 
-/* Telegram CTA — Button: master 563:452. В контексте страниц: header светлый 451:7857 + dock 564:465 = Small; footer / тёмная зона 595:462 = Big White. Presed: Small #3c3c3c, Big light — var(--color-grey). */
+/* Telegram CTA — Button: master 563:452. Small: gap иконка–текст 12px, padding 12/14/12; Big — footer. Presed: Small #3c3c3c, Big light — var(--color-grey). */
 .telegram-btn {
   display: inline-flex;
   align-items: center;
@@ -901,7 +901,7 @@ a {
 .telegram-btn--size-sm {
   height: auto;
   min-height: 0;
-  gap: 8px;
+  gap: 12px;
   padding: 12px 14px 12px 12px;
 }
 
@@ -920,11 +920,11 @@ a {
   height: 14px;
 }
 
-/* Header / dock: Small padding (Figma 451:7857, 564:465); applies in .header-actions unless .telegram-btn--size-lg */
+/* Header / dock: Small padding (Figma 451:7857, 564:465); gap иконка–текст 12px */
 .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--size-lg) {
   height: auto;
   min-height: 0;
-  gap: 8px;
+  gap: 12px;
   padding: 12px 14px 12px 12px;
   width: auto;
 }
@@ -940,10 +940,10 @@ a {
   height: 14px;
 }
 
-/* Figma 451:7857 — instance button 595:443: 108×38 */
+/* Светлый хедер: фикс. ширина под small + gap 12 (ранее 108 при gap 8) */
 .hero .header .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--light),
 .case-top .header .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--light) {
-  width: 108px;
+  width: 112px;
   box-sizing: border-box;
 }
 
