@@ -871,8 +871,27 @@ a {
 }
 
 .footer {
-  background: var(--color-black);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   height: 562px;
+  background: var(--color-black);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.footer-content {
+  box-sizing: border-box;
+  width: 100cqw;
+  max-width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
   padding: 82px 82px 32px;
   display: flex;
   justify-content: space-between;
@@ -1080,7 +1099,7 @@ a {
     white-space: normal;
   }
 
-  .footer {
+  .footer-content {
     padding: 32px 24px;
     flex-direction: column;
     align-items: flex-start;
