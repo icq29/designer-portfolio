@@ -245,7 +245,7 @@ body {
   width: 100%;
 }
 
-/* Хедер: logo-блок 172px | nav по центру (flex:1) | actions gap 42; Telegram small gap 12px, ширина 112px */
+/* Хедер: logo-блок 172px | nav по центру (flex:1) | actions gap 42; Telegram small: gap 12px, pr 18px, ширина 116px */
 .case-top .header .header-brand,
 .hero .header .header-brand {
   width: 172px;
@@ -876,7 +876,7 @@ a {
   transform: rotateX(180deg);
 }
 
-/* Telegram CTA — Button: master 563:452. Small: gap иконка–текст 12px, padding 12/14/12; Big — footer. Presed: Small #3c3c3c, Big light — var(--color-grey). */
+/* Telegram CTA — Button: master 563:452. Small: gap 12px, padding 12px 18px 12px 12px; Big — footer. Presed: Small #3c3c3c, Big light — var(--color-grey). */
 .telegram-btn {
   display: inline-flex;
   align-items: center;
@@ -902,7 +902,7 @@ a {
   height: auto;
   min-height: 0;
   gap: 12px;
-  padding: 12px 14px 12px 12px;
+  padding: 12px 18px 12px 12px;
 }
 
 .telegram-btn--size-sm.telegram-btn--component {
@@ -925,7 +925,7 @@ a {
   height: auto;
   min-height: 0;
   gap: 12px;
-  padding: 12px 14px 12px 12px;
+  padding: 12px 18px 12px 12px;
   width: auto;
 }
 
@@ -943,7 +943,7 @@ a {
 /* Светлый хедер: фикс. ширина под small + gap 12 (ранее 108 при gap 8) */
 .hero .header .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--light),
 .case-top .header .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--light) {
-  width: 112px;
+  width: 116px;
   box-sizing: border-box;
 }
 
