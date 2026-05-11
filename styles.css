@@ -1029,10 +1029,11 @@ a {
   border-color: transparent;
 }
 
+/* Dock light Telegram — Figma 595:438 hover, 604:192 pressed (Small White) */
 .header.header--case-scroll .telegram-btn--light:hover,
 .header.header--case-scroll .telegram-btn--light:focus-visible {
-  background: transparent;
-  border-color: var(--color-white);
+  background: #3c3c3c;
+  border-color: transparent;
 }
 
 .header.header--case-scroll .telegram-btn--light:hover > span:not(.telegram-icon-wrap),
@@ -1053,8 +1054,8 @@ a {
 }
 
 .header.header--case-scroll .telegram-btn--light:active {
-  background: #3c3c3c;
-  border-color: #3c3c3c;
+  background: #2c2c2c;
+  border-color: transparent;
 }
 
 .header.header--case-scroll .telegram-btn--light:active > span:not(.telegram-icon-wrap) {
