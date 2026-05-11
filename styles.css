@@ -244,19 +244,32 @@ body {
   width: 100%;
 }
 
+/* Светлый pill-header — Figma node 451:7857 (1440×70): py 16, logo 168×24, nav gap 72, actions gap 42, Telegram 108×38 */
 .case-top .header,
 .hero .header {
-  padding: 16px;
+  box-sizing: border-box;
+  min-height: 70px;
+  padding: 16px 0;
+  align-items: center;
 }
 
 .case-top .header .header-brand,
 .hero .header .header-brand {
   width: 168px;
+  flex-shrink: 0;
+}
+
+.case-top .header .main-nav,
+.hero .header .main-nav {
+  flex: 1 1 auto;
+  justify-content: center;
+  min-width: 0;
 }
 
 .case-top .header .header-actions,
 .hero .header .header-actions {
   width: auto;
+  flex-shrink: 0;
   gap: 42px;
 }
 
@@ -267,6 +280,13 @@ body {
   font-weight: 500;
   font-size: 13px;
   letter-spacing: 0.52px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.case-top .header .header-actions a.cv-link,
+.hero .header .header-actions a.cv-link {
+  text-transform: none;
 }
 
 .case-top .header .flip-link,
@@ -925,6 +945,13 @@ a {
 .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--size-lg) .telegram-icon-wrap .telegram-icon {
   width: 14px;
   height: 14px;
+}
+
+/* Figma 451:7857 — instance button 595:443: 108×38 */
+.hero .header .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--light),
+.case-top .header .header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--light) {
+  width: 108px;
+  box-sizing: border-box;
 }
 
 .telegram-btn--component {
@@ -1794,6 +1821,12 @@ a {
     flex-wrap: wrap;
     gap: 16px;
     padding: 14px;
+  }
+
+  .hero .header,
+  .case-top .header {
+    min-height: 0;
+    padding: 14px 0;
   }
 
   .header.header--case-scroll {
