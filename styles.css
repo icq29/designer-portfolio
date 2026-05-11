@@ -146,7 +146,7 @@ body {
 
 .case-menu-dock {
   position: fixed;
-  top: calc(16px + env(safe-area-inset-top, 0px));
+  top: calc(12px + env(safe-area-inset-top, 0px));
   left: 0;
   right: 0;
   z-index: 100;
