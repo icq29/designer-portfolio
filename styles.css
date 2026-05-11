@@ -91,7 +91,8 @@ body {
 }
 
 .page {
-  padding: 0 clamp(24px, calc((100vw - 1204px) / 2), 120px);
+  --page-pad: clamp(24px, calc((100vw - 1204px) / 2), 120px);
+  padding: 0 var(--page-pad);
   opacity: 0;
   animation: pageFadeIn 3000ms cubic-bezier(0.16, 1, 0.3, 1) 650ms forwards;
   will-change: opacity;
@@ -396,9 +397,10 @@ a {
   background: var(--color-black);
   color: var(--color-white);
   overflow: hidden;
-  width: 100vw;
+  width: calc(100% + 2 * var(--page-pad));
   max-width: none;
-  margin-left: calc(50% - 50vw);
+  margin-left: calc(-1 * var(--page-pad));
+  margin-right: calc(-1 * var(--page-pad));
   padding: 0;
 }
 
