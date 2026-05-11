@@ -130,6 +130,10 @@ body {
   align-items: stretch;
 }
 
+.container.container--case {
+  gap: 52px;
+}
+
 .header {
   min-height: 56px;
   background: var(--color-white);
@@ -237,11 +241,12 @@ body {
 
 .case-title {
   margin: 0;
-  width: 100%;
+  width: 801px;
+  max-width: 100%;
   font-family: var(--font-halvar);
   font-weight: 400;
   font-size: 42px;
-  line-height: 1.2;
+  line-height: 120%;
   letter-spacing: -0.84px;
   text-transform: uppercase;
   color: var(--color-black);
@@ -1258,6 +1263,10 @@ a {
     gap: 72px;
   }
 
+  .container.container--case {
+    gap: 52px;
+  }
+
   .hero {
     height: 100vh;
     height: 100dvh;
@@ -1352,6 +1361,7 @@ a {
 
   .case-title {
     font-size: clamp(22px, 5.5vw, 42px);
+    line-height: 120%;
     letter-spacing: -0.04em;
   }
 
