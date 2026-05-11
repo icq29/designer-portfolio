@@ -1084,6 +1084,41 @@ a {
   opacity: 1;
 }
 
+/* Explicit dock override for requested class: telegram-btn--component telegram-btn--light telegram-btn--size-sm */
+.case-menu-dock .header.header--case-scroll a.telegram-btn.telegram-btn--component.telegram-btn--light.telegram-btn--size-sm:hover {
+  background: #3c3c3c;
+  border-color: transparent;
+}
+
+.case-menu-dock .header.header--case-scroll a.telegram-btn.telegram-btn--component.telegram-btn--light.telegram-btn--size-sm:hover > span:not(.telegram-icon-wrap) {
+  color: var(--color-white);
+}
+
+.case-menu-dock .header.header--case-scroll a.telegram-btn.telegram-btn--component.telegram-btn--light.telegram-btn--size-sm:hover .telegram-icon--default {
+  opacity: 0;
+}
+
+.case-menu-dock .header.header--case-scroll a.telegram-btn.telegram-btn--component.telegram-btn--light.telegram-btn--size-sm:hover .telegram-icon--hover {
+  opacity: 1;
+}
+
+.case-menu-dock .header.header--case-scroll a.telegram-btn.telegram-btn--component.telegram-btn--light.telegram-btn--size-sm:active {
+  background: #2c2c2c;
+  border-color: transparent;
+}
+
+.case-menu-dock .header.header--case-scroll a.telegram-btn.telegram-btn--component.telegram-btn--light.telegram-btn--size-sm:active > span:not(.telegram-icon-wrap) {
+  color: var(--color-white);
+}
+
+.case-menu-dock .header.header--case-scroll a.telegram-btn.telegram-btn--component.telegram-btn--light.telegram-btn--size-sm:active .telegram-icon--default {
+  opacity: 0;
+}
+
+.case-menu-dock .header.header--case-scroll a.telegram-btn.telegram-btn--component.telegram-btn--light.telegram-btn--size-sm:active .telegram-icon--hover {
+  opacity: 1;
+}
+
 .hero {
   height: 100vh;
   height: 100dvh;
