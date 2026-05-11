@@ -892,7 +892,7 @@ a {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 82px 82px 32px;
+  padding: 82px 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -1100,7 +1100,7 @@ a {
   }
 
   .footer-content {
-    padding: 32px 24px;
+    padding: 32px 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
