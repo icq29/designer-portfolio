@@ -511,6 +511,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: stretch;
   width: max-content;
   will-change: transform;
   animation: caseMarqueeScroll 12.5s linear infinite;
@@ -520,25 +521,22 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: stretch;
   flex: 0 0 auto;
-  gap: 0;
+  gap: 12px;
+  padding-right: 12px;
+  box-sizing: content-box;
 }
 
 .case-marquee-shot {
   display: block;
   height: var(--case-marquee-h);
   width: auto;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  background: #f1f1f1;
   flex-shrink: 0;
   pointer-events: none;
   user-select: none;
-}
-
-.case-marquee-shot--w626 {
-  aspect-ratio: 626 / 424;
 }
 
 .case-marquee-shot--w478 {
