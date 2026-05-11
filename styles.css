@@ -195,7 +195,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 0;
-  padding: 10px 10px 10px 17px;
+  padding: 10px 10px 10px 20px;
   background: var(--color-black);
   border-radius: var(--radius-pill);
 }
@@ -909,7 +909,7 @@ a {
   width: auto;
 }
 
-.telegram-btn--size-sm span {
+.telegram-btn--size-sm > span:not(.telegram-icon-wrap) {
   font-size: 13px;
   letter-spacing: 0.52px;
 }
@@ -929,7 +929,7 @@ a {
   width: auto;
 }
 
-.header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--size-lg) span {
+.header-actions > .telegram-btn.telegram-btn--component:not(.telegram-btn--size-lg) > span:not(.telegram-icon-wrap) {
   font-size: 13px;
   letter-spacing: 0.52px;
 }
@@ -955,9 +955,12 @@ a {
 
 .telegram-icon-wrap {
   position: relative;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   display: inline-block;
+  font-size: 0;
+  line-height: 0;
 }
 
 .telegram-icon-wrap .telegram-icon {
@@ -973,7 +976,7 @@ a {
   opacity: 0;
 }
 
-.telegram-btn span {
+.telegram-btn > span:not(.telegram-icon-wrap) {
   font-family: var(--font-tags);
   font-size: 15px;
   font-weight: 500;
@@ -989,8 +992,8 @@ a {
   border-color: var(--color-black);
 }
 
-.header .telegram-btn--component:not(.telegram-btn--light):hover span,
-.header .telegram-btn--component:not(.telegram-btn--light):focus-visible span {
+.header .telegram-btn--component:not(.telegram-btn--light):hover > span:not(.telegram-icon-wrap),
+.header .telegram-btn--component:not(.telegram-btn--light):focus-visible > span:not(.telegram-icon-wrap) {
   color: var(--color-black);
 }
 
@@ -1009,7 +1012,7 @@ a {
   border-color: #3c3c3c;
 }
 
-.header .telegram-btn--component:not(.telegram-btn--light):active span {
+.header .telegram-btn--component:not(.telegram-btn--light):active > span:not(.telegram-icon-wrap) {
   color: var(--color-white);
 }
 
@@ -1032,8 +1035,8 @@ a {
   border-color: var(--color-white);
 }
 
-.header.header--case-scroll .telegram-btn--light:hover span,
-.header.header--case-scroll .telegram-btn--light:focus-visible span {
+.header.header--case-scroll .telegram-btn--light:hover > span:not(.telegram-icon-wrap),
+.header.header--case-scroll .telegram-btn--light:focus-visible > span:not(.telegram-icon-wrap) {
   color: var(--color-white);
 }
 
@@ -1054,7 +1057,7 @@ a {
   border-color: #3c3c3c;
 }
 
-.header.header--case-scroll .telegram-btn--light:active span {
+.header.header--case-scroll .telegram-btn--light:active > span:not(.telegram-icon-wrap) {
   color: var(--color-white);
 }
 
@@ -1730,7 +1733,7 @@ a {
   border-color: transparent;
 }
 
-.telegram-btn--light span {
+.telegram-btn--light > span:not(.telegram-icon-wrap) {
   color: var(--color-black);
 }
 
@@ -1740,8 +1743,8 @@ a {
   border-color: var(--color-white);
 }
 
-.footer .telegram-btn--light:hover span,
-.footer .telegram-btn--light:focus-visible span {
+.footer .telegram-btn--light:hover > span:not(.telegram-icon-wrap),
+.footer .telegram-btn--light:focus-visible > span:not(.telegram-icon-wrap) {
   color: var(--color-white);
 }
 
@@ -1760,7 +1763,7 @@ a {
   border-color: var(--color-grey);
 }
 
-.footer .telegram-btn--light:active span {
+.footer .telegram-btn--light:active > span:not(.telegram-icon-wrap) {
   color: var(--color-white);
 }
 
@@ -1825,7 +1828,7 @@ a {
   .header.header--case-scroll {
     flex-wrap: wrap;
     gap: 16px;
-    padding: 10px 10px 10px 17px;
+    padding: 10px 10px 10px 20px;
   }
 
   .header-brand,
