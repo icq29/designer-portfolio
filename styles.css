@@ -396,14 +396,17 @@ a {
 }
 
 .banner {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background: var(--color-black);
   color: var(--color-white);
   overflow: hidden;
-  width: calc(100% + 2 * var(--page-pad));
-  max-width: none;
-  margin-left: calc(-1 * var(--page-pad));
-  margin-right: calc(-1 * var(--page-pad));
-  padding: 0;
 }
 
 .banner-content {
