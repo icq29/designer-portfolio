@@ -1024,7 +1024,8 @@ a {
   opacity: 0;
 }
 
-.header.header--case-scroll .telegram-btn.telegram-btn--component.telegram-btn--light {
+/* Dock Telegram (Figma 606:208 + 563:452): default white, hover #3c3c3c, pressed #2c2c2c */
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn.telegram-btn--component.telegram-btn--light {
   background: var(--color-white);
   border-color: transparent;
   width: 116px;
@@ -1033,58 +1034,53 @@ a {
   padding: 12px 18px 12px 12px;
 }
 
-.header.header--case-scroll .telegram-btn--light > span:not(.telegram-icon-wrap) {
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light > span:not(.telegram-icon-wrap) {
   color: var(--color-black);
 }
 
-.header.header--case-scroll .telegram-btn--light .telegram-icon--default {
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light .telegram-icon--default {
   opacity: 1;
 }
 
-.header.header--case-scroll .telegram-btn--light .telegram-icon--hover {
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light .telegram-icon--hover {
   opacity: 0;
 }
 
-/* Dock light Telegram — Figma 595:438 hover, 604:192 pressed (Small White) */
-.header.header--case-scroll .telegram-btn--light:hover,
-.header.header--case-scroll .telegram-btn--light:focus-visible {
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:hover,
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:focus-visible {
   background: #3c3c3c;
   border-color: transparent;
 }
 
-.header.header--case-scroll .telegram-btn--light:hover > span:not(.telegram-icon-wrap),
-.header.header--case-scroll .telegram-btn--light:focus-visible > span:not(.telegram-icon-wrap) {
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:hover > span:not(.telegram-icon-wrap),
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:focus-visible > span:not(.telegram-icon-wrap) {
   color: var(--color-white);
 }
 
-.header.header--case-scroll .telegram-btn--light:hover .telegram-icon--default,
-.header.header--case-scroll .telegram-btn--light:focus-visible .telegram-icon--default {
-  filter: none;
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:hover .telegram-icon--default,
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:focus-visible .telegram-icon--default {
   opacity: 0;
 }
 
-.header.header--case-scroll .telegram-btn--light:hover .telegram-icon--hover,
-.header.header--case-scroll .telegram-btn--light:focus-visible .telegram-icon--hover {
-  filter: none;
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:hover .telegram-icon--hover,
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:focus-visible .telegram-icon--hover {
   opacity: 1;
 }
 
-.header.header--case-scroll .telegram-btn--light:active {
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:active {
   background: #2c2c2c;
   border-color: transparent;
 }
 
-.header.header--case-scroll .telegram-btn--light:active > span:not(.telegram-icon-wrap) {
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:active > span:not(.telegram-icon-wrap) {
   color: var(--color-white);
 }
 
-.header.header--case-scroll .telegram-btn--light:active .telegram-icon--default {
-  filter: none;
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:active .telegram-icon--default {
   opacity: 0;
 }
 
-.header.header--case-scroll .telegram-btn--light:active .telegram-icon--hover {
-  filter: none;
+.case-menu-dock.is-visible .header.header--case-scroll .telegram-btn--light:active .telegram-icon--hover {
   opacity: 1;
 }
 
