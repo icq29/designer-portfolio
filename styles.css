@@ -135,13 +135,14 @@ body {
 }
 
 .header {
-  min-height: 56px;
+  box-sizing: border-box;
+  min-height: 70px;
   background: var(--color-white);
   border-radius: var(--radius-pill);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 16px 16px 23px;
+  padding: 16px 0;
 }
 
 .case-menu-dock {
@@ -244,15 +245,7 @@ body {
   width: 100%;
 }
 
-/* Светлый pill-header — Figma node 451:7857 (1440×70): py 16, logo 168×24, nav gap 72, actions gap 42, Telegram 108×38 */
-.case-top .header,
-.hero .header {
-  box-sizing: border-box;
-  min-height: 70px;
-  padding: 16px 0;
-  align-items: center;
-}
-
+/* Figma 451:7857 — сетка: logo 168 | nav по центру (flex:1) | actions gap 42, Telegram 108px */
 .case-top .header .header-brand,
 .hero .header .header-brand {
   width: 168px;
