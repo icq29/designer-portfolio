@@ -144,24 +144,52 @@ body {
   padding: 16px 16px 16px 23px;
 }
 
-.header.header--case-scroll {
+.case-menu-dock {
   position: fixed;
   top: calc(16px + env(safe-area-inset-top, 0px));
-  left: max(var(--page-pad), env(safe-area-inset-left, 0px));
-  right: max(var(--page-pad), env(safe-area-inset-right, 0px));
+  left: 0;
+  right: 0;
   z-index: 100;
   box-sizing: border-box;
-  width: auto;
-  max-width: none;
-  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--page-pad);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-14px);
+  transition:
+    opacity 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.case-menu-dock.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-menu-dock {
+    transition-duration: 120ms;
+    transition-timing-function: ease;
+  }
+}
+
+.case-menu-dock-inner {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1920px;
+  min-width: min(1204px, 100%);
+  margin: 0 auto;
+}
+
+.header.header--case-scroll {
+  position: relative;
+  width: 100%;
   min-height: 78px;
   padding: 16px 16px 16px 27px;
   background: var(--color-black);
   border-radius: var(--radius-pill);
-}
-
-.page--case .case-top {
-  padding-top: calc(78px + 16px + env(safe-area-inset-top, 0px));
 }
 
 .header--case-scroll .logo {
@@ -1517,8 +1545,6 @@ a {
     flex-wrap: wrap;
     gap: 16px;
     padding: 14px;
-    left: max(var(--page-pad), env(safe-area-inset-left, 0px));
-    right: max(var(--page-pad), env(safe-area-inset-right, 0px));
   }
 
   .header-brand,

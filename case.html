@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260512-2700" />
+    <link rel="stylesheet" href="./styles.css?v=20260512-2800" />
   </head>
   <body>
     <main class="page page--case">
-      <div class="container container--case">
-        <div class="case-top">
+      <div class="case-menu-dock" id="case-menu-dock" aria-hidden="true">
+        <div class="case-menu-dock-inner">
           <header class="header header--case-scroll">
             <div class="header-brand">
               <a class="logo" href="./index.html" aria-label="На главную">Si.</a>
@@ -59,6 +59,10 @@
               </a>
             </div>
           </header>
+        </div>
+      </div>
+      <div class="container container--case">
+        <div class="case-top">
           <section class="case-cover" aria-label="Превью проекта">
             <div class="case-cover-frame">
               <div class="case-cover-clip">
@@ -186,5 +190,29 @@
         </section>
       </div>
     </main>
+    <script>
+      (function () {
+        var dock = document.getElementById("case-menu-dock");
+        if (!dock) return;
+
+        function firstScreenPx() {
+          return window.innerHeight;
+        }
+
+        function update() {
+          if (window.scrollY > firstScreenPx()) {
+            dock.classList.add("is-visible");
+            dock.setAttribute("aria-hidden", "false");
+          } else {
+            dock.classList.remove("is-visible");
+            dock.setAttribute("aria-hidden", "true");
+          }
+        }
+
+        update();
+        window.addEventListener("scroll", update, { passive: true });
+        window.addEventListener("resize", update);
+      })();
+    </script>
   </body>
 </html>
