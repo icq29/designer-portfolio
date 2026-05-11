@@ -1,0 +1,20 @@
+# Production: Vercel deploys on every push to `main` via the GitHub app
+# (Project → Settings → Git → Production Branch). This job only verifies build.
+name: Build main
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npm run build
