@@ -647,6 +647,7 @@ body {
   letter-spacing: -0.84px;
   text-transform: uppercase;
   color: var(--color-black);
+  fill: var(--color-black);
 }
 
 .case-hypotheses-col {
