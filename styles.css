@@ -194,7 +194,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 78px;
-  padding: 16px 16px 16px 27px;
+  padding: 6px 6px 6px 17px;
   background: var(--color-black);
   border-radius: var(--radius-pill);
 }
@@ -1649,7 +1649,7 @@ a {
   .header.header--case-scroll {
     flex-wrap: wrap;
     gap: 16px;
-    padding: 14px;
+    padding: 6px 6px 6px 17px;
   }
 
   .header-brand,
