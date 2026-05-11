@@ -581,7 +581,8 @@ body {
   --lenta-slide-gap: 12px;
   --lenta-cell-h: 424px;
   --lenta-track-inner: calc(
-    958px + var(--lenta-slide-gap) + 636px + var(--lenta-slide-gap) + 478px + var(--lenta-slide-gap) + 958px
+    958px + var(--lenta-slide-gap) + 490px + var(--lenta-slide-gap) + 636px + var(--lenta-slide-gap) + 478px +
+      var(--lenta-slide-gap) + 400px + var(--lenta-slide-gap) + 670px
   );
   --lenta-shift: calc(var(--lenta-track-inner) + var(--lenta-slide-gap));
   width: 100%;
@@ -611,7 +612,7 @@ body {
   gap: var(--lenta-slide-gap);
   width: max-content;
   will-change: transform;
-  animation: case-lenta-marquee 22s linear infinite;
+  animation: case-lenta-marquee 28s linear infinite;
 }
 
 .case-lenta-track {
@@ -639,6 +640,11 @@ body {
   flex: 0 0 958px;
 }
 
+.case-lenta-cell--490 {
+  width: 490px;
+  flex: 0 0 490px;
+}
+
 .case-lenta-cell--636 {
   width: 636px;
   flex: 0 0 636px;
@@ -649,12 +655,26 @@ body {
   flex: 0 0 478px;
 }
 
+.case-lenta-cell--400 {
+  width: 400px;
+  flex: 0 0 400px;
+}
+
+.case-lenta-cell--670 {
+  width: 670px;
+  flex: 0 0 670px;
+}
+
 .case-lenta-cell img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.case-lenta-cell--cover img {
+  object-fit: cover;
 }
 
 @media (prefers-reduced-motion: reduce) {
