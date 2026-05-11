@@ -226,10 +226,6 @@ body {
   color: var(--color-gray-100);
 }
 
-.header.header--case-scroll .telegram-btn span {
-  letter-spacing: 0.6px;
-}
-
 .header.header--case-scroll .telegram-btn--component.telegram-btn--light {
   width: auto;
 }
@@ -823,7 +819,7 @@ a {
   font-weight: 500;
   color: var(--color-white);
   text-transform: none;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.6px;
 }
 
 .header .telegram-btn--component:hover,
@@ -873,10 +869,6 @@ a {
   color: var(--color-black);
 }
 
-.header.header--case-scroll .telegram-icon-wrap .telegram-icon {
-  filter: brightness(0);
-}
-
 .header.header--case-scroll .telegram-btn--light:hover,
 .header.header--case-scroll .telegram-btn--light:focus-visible {
   background: transparent;
@@ -896,7 +888,7 @@ a {
 
 .header.header--case-scroll .telegram-btn--light:hover .telegram-icon--hover,
 .header.header--case-scroll .telegram-btn--light:focus-visible .telegram-icon--hover {
-  filter: brightness(0) invert(1);
+  filter: none;
   opacity: 1;
 }
 
@@ -915,7 +907,7 @@ a {
 }
 
 .header.header--case-scroll .telegram-btn--light:active .telegram-icon--hover {
-  filter: brightness(0) invert(1);
+  filter: none;
   opacity: 1;
 }
 
