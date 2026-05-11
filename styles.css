@@ -395,14 +395,24 @@ a {
 .banner {
   background: var(--color-black);
   color: var(--color-white);
-  padding: 82px;
   overflow: hidden;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  padding: 0;
 }
 
 .banner-content {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 82px;
   display: flex;
   flex-direction: column;
   gap: 212px;
+  overflow: hidden;
 }
 
 .banner-header {
