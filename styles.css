@@ -603,9 +603,11 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 0;
   width: 200%;
   will-change: transform;
-  animation: case-lenta-marquee 48s linear infinite;
+  animation: case-lenta-marquee 22s linear infinite;
 }
 
 .case-lenta-track {
@@ -613,11 +615,33 @@ body {
   display: grid;
   grid-template-columns: 958fr 636fr 478fr 958fr;
   align-items: stretch;
-  gap: clamp(6px, 1.5cqi, 12px);
+  gap: 12px;
   width: 50%;
   flex: 0 0 50%;
   min-width: 0;
   min-height: clamp(180px, 28cqi, 424px);
+}
+
+@supports (width: 1cqi) {
+  @keyframes case-lenta-marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-100cqi - 12px));
+    }
+  }
+
+  .case-lenta-marquee {
+    gap: 12px;
+    width: max-content;
+  }
+
+  .case-lenta-track {
+    width: 100cqi;
+    flex: 0 0 100cqi;
+  }
 }
 
 .case-lenta-cell {
@@ -637,12 +661,15 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .case-lenta-marquee {
     width: 100%;
+    max-width: 100%;
     animation: none;
     transform: none;
+    gap: 0;
   }
 
   .case-lenta-track {
     width: 100%;
+    max-width: 100%;
     flex: 0 0 100%;
   }
 
