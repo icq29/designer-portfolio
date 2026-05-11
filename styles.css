@@ -547,6 +547,15 @@ a {
   min-width: 0;
 }
 
+.work-card-image-link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  outline-offset: 4px;
+}
+
 .work-card-image {
   width: 100%;
   height: 502px;
