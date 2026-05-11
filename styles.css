@@ -164,19 +164,27 @@ body {
   position: relative;
   flex: 0 0 auto;
   width: min(1179px, 100%);
-  height: calc(292px - 28px);
+  height: 264px;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
 
-.case-cover-frame img {
+.case-cover-clip {
   position: absolute;
   inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.case-cover-frame img {
+  position: absolute;
+  left: 0;
+  top: -0.02%;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 268.98%;
   max-width: none;
-  object-fit: cover;
   pointer-events: none;
 }
 
