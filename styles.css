@@ -491,6 +491,84 @@ body {
   color: var(--color-grey);
 }
 
+.case-marquee {
+  --case-marquee-h: clamp(200px, 28vw, 424px);
+  --case-marquee-gap: clamp(6px, 1vw, 8px);
+  flex-shrink: 0;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  background: var(--color-white);
+}
+
+.case-marquee-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.case-marquee-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: max-content;
+  will-change: transform;
+  animation: caseMarqueeScroll 50s linear infinite;
+}
+
+.case-marquee-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  flex: 0 0 auto;
+  gap: var(--case-marquee-gap);
+}
+
+.case-marquee-shot {
+  display: block;
+  height: var(--case-marquee-h);
+  width: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.case-marquee-shot--w626 {
+  aspect-ratio: 626 / 424;
+}
+
+.case-marquee-shot--w478 {
+  aspect-ratio: 478 / 424;
+}
+
+.case-marquee-shot--w636 {
+  aspect-ratio: 636 / 424;
+}
+
+.case-marquee-shot--w958 {
+  aspect-ratio: 958 / 424;
+}
+
+@keyframes caseMarqueeScroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .case-marquee-track {
+    animation: none;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .header-brand {
   width: 207px;
   display: flex;
