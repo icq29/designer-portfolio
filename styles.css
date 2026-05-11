@@ -435,9 +435,11 @@ body {
 
 .case-process-title {
   margin: 0;
+  flex: 0 0 auto;
+  align-self: flex-start;
+  box-sizing: border-box;
   width: 451px;
   max-width: 100%;
-  box-sizing: border-box;
   font-family: var(--font-halvar);
   font-weight: 400;
   font-size: 42px;
