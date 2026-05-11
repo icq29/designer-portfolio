@@ -514,7 +514,7 @@ body {
   flex-wrap: nowrap;
   width: max-content;
   will-change: transform;
-  animation: caseMarqueeScroll 50s linear infinite;
+  animation: caseMarqueeScroll 25s linear infinite;
 }
 
 .case-marquee-group {
