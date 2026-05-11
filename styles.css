@@ -201,7 +201,7 @@ body {
 }
 
 .header.header--case-scroll .header-brand {
-  width: 172px;
+  width: 168px;
 }
 
 .header.header--case-scroll .header-actions {
@@ -245,10 +245,10 @@ body {
   width: 100%;
 }
 
-/* Хедер: logo-блок 172px | nav по центру (flex:1) | actions gap 42; Telegram small: gap 12px, pr 18px, ширина 116px */
+/* Хедер: logo-блок 176px | nav по центру (flex:1) | actions gap 42; Telegram small: gap 12px, pr 18px, ширина 116px */
 .case-top .header .header-brand,
 .hero .header .header-brand {
-  width: 172px;
+  width: 176px;
   flex-shrink: 0;
 }
 
@@ -1027,6 +1027,8 @@ a {
 .header.header--case-scroll .telegram-btn.telegram-btn--component.telegram-btn--light {
   background: var(--color-white);
   border-color: transparent;
+  width: 116px;
+  box-sizing: border-box;
 }
 
 /* Dock light Telegram — Figma 595:438 hover, 604:192 pressed (Small White) */
