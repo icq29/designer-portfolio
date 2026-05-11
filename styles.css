@@ -239,6 +239,135 @@ body {
   white-space: nowrap;
 }
 
+.case-title {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-halvar);
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: -0.84px;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.case-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 42px 52px;
+  width: 100%;
+}
+
+.case-info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.case-info-rule {
+  flex-shrink: 0;
+  width: 1px;
+  height: 43px;
+  background: var(--color-gray-100);
+}
+
+.case-info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1;
+}
+
+.case-info-label {
+  margin: 0;
+  font-family: var(--font-tags);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.34px;
+  color: var(--color-black);
+}
+
+.case-info-text {
+  margin: 0;
+  font-family: var(--font-tags);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  color: var(--color-grey);
+}
+
+.case-rule {
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-gray-100);
+}
+
+.case-task {
+  display: flex;
+  align-items: flex-start;
+  gap: 82px;
+  width: 100%;
+}
+
+.case-task-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.case-task-heading {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-tags);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 1;
+  letter-spacing: 0.34px;
+  color: var(--color-black);
+}
+
+.case-task-body {
+  margin: 0;
+  width: 100%;
+  font-family: var(--font-tags);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: var(--color-grey);
+}
+
+.case-task-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+  font-family: var(--font-tags);
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  color: var(--color-grey);
+}
+
+.case-task-line {
+  margin: 0;
+  width: 100%;
+  line-height: 1;
+}
+
+.case-task-line--multiline {
+  line-height: 1.5;
+}
+
 .header-brand {
   width: 207px;
   display: flex;
@@ -1223,5 +1352,26 @@ a {
   .footer-cta p {
     width: auto;
     text-align: left;
+  }
+
+  .case-title {
+    font-size: clamp(22px, 5.5vw, 42px);
+    letter-spacing: -0.04em;
+  }
+
+  .case-info {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .case-info-rule {
+    width: 100%;
+    height: 1px;
+  }
+
+  .case-task {
+    flex-direction: column;
+    gap: 40px;
   }
 }
