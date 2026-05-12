@@ -759,7 +759,9 @@ body {
 }
 
 .case-demo {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   height: 598px;
   background: #f1f1f1;
   position: relative;
@@ -844,7 +846,9 @@ body {
 }
 
 .case-demo-calendar {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   height: 662px;
   background: #f1f1f1;
   position: relative;
