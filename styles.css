@@ -649,7 +649,9 @@ body {
       var(--lenta-slide-gap) + 400px + var(--lenta-slide-gap) + 670px
   );
   --lenta-shift: calc(var(--lenta-track-inner) + var(--lenta-slide-gap));
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   overflow: hidden;
 }
 
