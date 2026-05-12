@@ -875,6 +875,18 @@ body {
   object-fit: cover;
 }
 
+.case-components-block,
+.case-design-system-block {
+  width: 100%;
+}
+
+.case-components-block-img,
+.case-design-system-block-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .header-brand {
   width: 176px;
   display: flex;
