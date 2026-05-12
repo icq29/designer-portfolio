@@ -911,7 +911,8 @@ body {
 .case-components-create-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 798 / 280;
+  max-width: 267px;
+  aspect-ratio: 267 / 357;
   object-fit: cover;
   display: block;
 }
@@ -940,8 +941,10 @@ body {
 .case-components-slot-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 798 / 280;
+  max-width: 502px;
+  aspect-ratio: 502 / 76;
   object-fit: cover;
+  border-radius: 8px;
   display: block;
 }
 
