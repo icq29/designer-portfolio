@@ -875,13 +875,11 @@ body {
   object-fit: cover;
 }
 
-.case-components-block,
-.case-design-system-block {
+.case-components-block {
   width: 100%;
 }
 
-.case-components-block-img,
-.case-design-system-block-img {
+.case-components-block-img {
   display: block;
   width: 100%;
   height: auto;
