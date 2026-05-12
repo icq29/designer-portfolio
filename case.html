@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260512-5660" />
+    <link rel="stylesheet" href="./styles.css?v=20260512-5670" />
   </head>
   <body>
     <main class="page page--case">
@@ -428,6 +428,9 @@
         revealItems.forEach(function (item, index) {
           item.classList.add("reveal-item");
           item.style.setProperty("--reveal-delay", (index % 3) * 120 + "ms");
+          if (item.getBoundingClientRect().top < window.innerHeight * 0.95) {
+            item.classList.add("is-visible");
+          }
         });
 
         var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -450,6 +453,7 @@
         );
 
         revealItems.forEach(function (item) {
+          if (item.classList.contains("is-visible")) return;
           observer.observe(item);
         });
       })();
