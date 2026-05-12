@@ -894,6 +894,7 @@ body {
 }
 
 .case-components-create {
+  position: relative;
   width: 582px;
   height: 100%;
   border: 1px solid #e1e1e1;
@@ -906,8 +907,12 @@ body {
 }
 
 .case-components-create-img {
-  width: 223px;
-  height: 298px;
+  position: absolute;
+  left: calc(50% + 0.5px);
+  top: calc(50% - 0.5px);
+  transform: translate(-50%, -50%);
+  width: 279px;
+  height: 373px;
   object-fit: cover;
   display: block;
 }
@@ -921,6 +926,7 @@ body {
 }
 
 .case-components-slot {
+  position: relative;
   height: 213px;
   border-radius: 12px;
   background: #f1f1f1;
@@ -931,14 +937,19 @@ body {
 }
 
 .case-components-slot-img {
-  width: 520px;
-  height: 79px;
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 0.5px);
+  transform: translate(-50%, -50%);
+  width: 672px;
+  height: 102px;
   border-radius: 10px;
   object-fit: cover;
   display: block;
 }
 
 .case-components-card {
+  position: relative;
   flex: 1 1 auto;
   min-height: 0;
   border-radius: 12px;
@@ -950,9 +961,12 @@ body {
 }
 
 .case-components-card-img {
-  width: 782px;
-  height: 275px;
-  margin-left: 32px;
+  position: absolute;
+  left: 32px;
+  top: calc(50% + 33.5px);
+  transform: translateY(-50%);
+  width: 975px;
+  height: 342px;
   object-fit: cover;
   display: block;
 }
@@ -2084,10 +2098,13 @@ a {
   .case-components-create-img,
   .case-components-slot-img,
   .case-components-card-img {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: none;
     width: 100%;
     max-width: 100%;
     height: auto;
-    margin-left: 0;
   }
 
   .work-grid {
