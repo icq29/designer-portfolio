@@ -1020,6 +1020,13 @@ body {
   white-space: nowrap;
 }
 
+.page--case .case-design-system-text.reveal-item {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 0 0);
+  filter: none;
+}
+
 
 .header-brand {
   width: 176px;
