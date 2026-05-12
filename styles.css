@@ -907,9 +907,9 @@ body {
 }
 
 .case-components-create-img {
-  width: 267px;
-  height: 357px;
-  max-width: 267px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 798 / 280;
   object-fit: cover;
   display: block;
 }
@@ -937,10 +937,16 @@ body {
 
 .case-components-slot-img {
   width: 100%;
-  max-width: 502px;
   height: auto;
-  aspect-ratio: 502 / 76;
-  border-radius: 8px;
+  aspect-ratio: 798 / 280;
+  object-fit: cover;
+  display: block;
+}
+
+.case-components-card-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 798 / 280;
   object-fit: cover;
   display: block;
 }
@@ -958,13 +964,6 @@ body {
   overflow: hidden;
 }
 
-.case-components-card-img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 798 / 280;
-  object-fit: cover;
-  display: block;
-}
 
 .header-brand {
   width: 176px;
