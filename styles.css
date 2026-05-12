@@ -876,27 +876,26 @@ body {
 }
 
 .case-components-block {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  height: 554px;
+  width: 100%;
   overflow: hidden;
 }
 
 .case-components-layout {
-  width: min(1440px, 100%);
-  height: 100%;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 554px;
   display: flex;
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   gap: 12px;
 }
 
 .case-components-create {
   position: relative;
-  width: 582px;
-  height: 100%;
+  flex: 0 1 582px;
+  width: 100%;
+  max-width: 582px;
+  min-height: 554px;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
   background: var(--color-white);
@@ -918,8 +917,9 @@ body {
 }
 
 .case-components-column {
-  flex: 1 1 auto;
+  flex: 1 1 846px;
   min-width: 0;
+  min-height: 554px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -2014,6 +2014,28 @@ a {
   opacity: 1;
 }
 
+@media (max-width: 1440px) {
+  .case-components-layout {
+    min-height: 0;
+    flex-direction: column;
+  }
+
+  .case-components-create {
+    max-width: none;
+    min-height: 320px;
+  }
+
+  .case-components-column {
+    min-height: 0;
+  }
+
+  .case-components-slot,
+  .case-components-card {
+    min-height: 170px;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 1360px) {
   .container {
     gap: 72px;
@@ -2070,9 +2092,8 @@ a {
   }
 
   .case-components-layout {
-    width: 100%;
-    height: auto;
-    padding: 0 12px;
+    min-height: 0;
+    flex-direction: column;
   }
 
   .case-components-create,
@@ -2082,17 +2103,19 @@ a {
   }
 
   .case-components-create {
-    width: 44%;
-    aspect-ratio: 582 / 554;
+    max-width: none;
+    min-height: 320px;
   }
 
-  .case-components-slot {
-    height: auto;
-    aspect-ratio: 846 / 213;
+  .case-components-column {
+    min-height: 0;
   }
 
+  .case-components-slot,
   .case-components-card {
-    aspect-ratio: 846 / 329;
+    height: auto;
+    min-height: 170px;
+    justify-content: center;
   }
 
   .case-components-create-img,
@@ -2187,6 +2210,7 @@ a {
 
   .case-components-create {
     width: 100%;
+    max-width: none;
     aspect-ratio: auto;
     min-height: 320px;
   }
