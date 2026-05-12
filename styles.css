@@ -883,7 +883,7 @@ body {
 .case-components-layout {
   width: 100%;
   max-width: 1920px;
-  min-width: 1268px;
+  min-width: 0;
   margin: 0 auto;
   display: flex;
   align-items: stretch;
@@ -894,6 +894,7 @@ body {
 
 .case-components-create {
   flex: 0 0 40.4167%;
+  min-width: 0;
   aspect-ratio: 582 / 480;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
