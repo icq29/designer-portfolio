@@ -530,6 +530,7 @@ body {
   gap: 32px;
   padding: 52px;
   background: #f1f1f1;
+  border-radius: 12px;
 }
 
 .case-pains-title {
