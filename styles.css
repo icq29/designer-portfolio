@@ -877,7 +877,7 @@ body {
 
 .case-components-block {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .case-components-layout {
@@ -885,6 +885,8 @@ body {
   max-width: 1920px;
   min-width: 0;
   margin: 0 auto;
+  padding: 0 1px;
+  box-sizing: border-box;
   display: flex;
   align-items: stretch;
   justify-content: center;
