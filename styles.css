@@ -122,6 +122,17 @@ body {
   filter: none;
 }
 
+.page--case .reveal-item {
+  transform: none;
+  transition:
+    opacity 620ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 620ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page--case .reveal-item.is-visible {
+  transform: none;
+}
+
 .container {
   container-type: inline-size;
   container-name: layout;
