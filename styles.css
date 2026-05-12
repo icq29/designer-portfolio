@@ -368,8 +368,8 @@ body {
 .case-breadcrumbs-sep {
   display: flex;
   flex-shrink: 0;
-  width: 5px;
-  height: 5px;
+  width: 12px;
+  height: 12px;
 }
 
 .case-breadcrumbs-sep img {
