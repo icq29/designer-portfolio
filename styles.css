@@ -896,6 +896,7 @@ body {
   flex: 0 0 40.4167%;
   min-width: 0;
   aspect-ratio: 582 / 480;
+  box-sizing: border-box;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
   background: var(--color-white);
