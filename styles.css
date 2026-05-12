@@ -876,13 +876,85 @@ body {
 }
 
 .case-components-block {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: 554px;
+  overflow: hidden;
 }
 
-.case-components-block-img {
+.case-components-layout {
+  width: min(1440px, 100%);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 12px;
+}
+
+.case-components-create {
+  width: 582px;
+  height: 100%;
+  border: 1px solid #e1e1e1;
+  border-radius: 12px;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.case-components-create-img {
+  width: 223px;
+  height: 298px;
+  object-fit: cover;
   display: block;
-  width: 100%;
-  height: auto;
+}
+
+.case-components-column {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.case-components-slot {
+  height: 213px;
+  border-radius: 12px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.case-components-slot-img {
+  width: 520px;
+  height: 79px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+
+.case-components-card {
+  flex: 1 1 auto;
+  min-height: 0;
+  border-radius: 12px;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.case-components-card-img {
+  width: 782px;
+  height: 275px;
+  margin-left: 32px;
+  object-fit: cover;
+  display: block;
 }
 
 .header-brand {
@@ -1979,6 +2051,45 @@ a {
     object-fit: contain;
   }
 
+  .case-components-block {
+    height: auto;
+  }
+
+  .case-components-layout {
+    width: 100%;
+    height: auto;
+    padding: 0 12px;
+  }
+
+  .case-components-create,
+  .case-components-slot,
+  .case-components-card {
+    min-height: 0;
+  }
+
+  .case-components-create {
+    width: 44%;
+    aspect-ratio: 582 / 554;
+  }
+
+  .case-components-slot {
+    height: auto;
+    aspect-ratio: 846 / 213;
+  }
+
+  .case-components-card {
+    aspect-ratio: 846 / 329;
+  }
+
+  .case-components-create-img,
+  .case-components-slot-img,
+  .case-components-card-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+
   .work-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2050,6 +2161,28 @@ a {
   .case-hypotheses-title {
     font-size: 34px;
     letter-spacing: -0.68px;
+  }
+
+  .case-components-layout {
+    flex-direction: column;
+    padding: 0 8px;
+  }
+
+  .case-components-create {
+    width: 100%;
+    aspect-ratio: auto;
+    min-height: 320px;
+  }
+
+  .case-components-column {
+    width: 100%;
+  }
+
+  .case-components-slot,
+  .case-components-card {
+    aspect-ratio: auto;
+    min-height: 170px;
+    justify-content: center;
   }
 
   .benefits-list {
