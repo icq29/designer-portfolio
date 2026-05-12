@@ -2023,6 +2023,15 @@ a {
   .case-components-create {
     flex-basis: auto;
     width: 100%;
+    aspect-ratio: auto;
+    padding: 42px 0;
+    box-sizing: border-box;
+  }
+
+  .case-components-create-img {
+    width: 267px;
+    height: 357px;
+    max-width: 267px;
   }
 
   .case-components-column {
