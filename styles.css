@@ -882,21 +882,18 @@ body {
 
 .case-components-layout {
   width: 100%;
-  height: auto;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: nowrap;
   gap: 12px;
 }
 
 .case-components-create {
-  position: relative;
-  flex: 0 1 582px;
-  width: 100%;
-  max-width: 582px;
-  min-height: 0;
-  aspect-ratio: 582 / 554;
+  flex: 0 0 40.4167%;
+  aspect-ratio: 582 / 480;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
   background: var(--color-white);
@@ -907,30 +904,27 @@ body {
 }
 
 .case-components-create-img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 47.94%;
+  width: 45.876%;
+  max-width: 267px;
   height: auto;
-  aspect-ratio: 279 / 373;
+  aspect-ratio: 267 / 357;
   object-fit: cover;
   display: block;
 }
 
 .case-components-column {
-  flex: 1 1 846px;
+  flex: 0 0 58.75%;
   min-width: 0;
-  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
 .case-components-slot {
-  position: relative;
-  height: auto;
-  aspect-ratio: 846 / 213;
+  width: 100%;
+  aspect-ratio: 846 / 140;
+  padding: 6.6206% 20.331%;
+  box-sizing: border-box;
   border-radius: 12px;
   background: #f1f1f1;
   display: flex;
@@ -940,39 +934,32 @@ body {
 }
 
 .case-components-slot-img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 79.43%;
+  width: 100%;
+  max-width: 502px;
   height: auto;
-  aspect-ratio: 672 / 102;
-  border-radius: 10px;
+  aspect-ratio: 502 / 76;
+  border-radius: 8px;
   object-fit: cover;
   display: block;
 }
 
 .case-components-card {
-  position: relative;
-  flex: 1 1 auto;
-  min-height: 0;
+  width: 100%;
+  aspect-ratio: 846 / 328;
+  padding: 2.837%;
+  box-sizing: border-box;
   border-radius: 12px;
   background: #f1f1f1;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: stretch;
+  justify-content: stretch;
   overflow: hidden;
 }
 
 .case-components-card-img {
-  position: absolute;
-  left: 3.78%;
-  top: 60.18%;
-  transform: translateY(-50%);
-  width: 115.25%;
+  width: 100%;
   height: auto;
-  aspect-ratio: 975 / 342;
-  max-width: none;
+  aspect-ratio: 798 / 280;
   object-fit: cover;
   display: block;
 }
@@ -2022,22 +2009,22 @@ a {
 
 @media (max-width: 1440px) {
   .case-components-layout {
-    min-height: 0;
     flex-direction: column;
+    max-width: none;
   }
 
   .case-components-create {
-    max-width: none;
-    min-height: 320px;
+    flex-basis: auto;
+    width: 100%;
   }
 
   .case-components-column {
-    min-height: 0;
+    flex-basis: auto;
+    width: 100%;
   }
 
   .case-components-slot,
   .case-components-card {
-    min-height: 170px;
     justify-content: center;
   }
 }
@@ -2091,49 +2078,6 @@ a {
   .case-demo-calendar-img {
     height: auto;
     object-fit: contain;
-  }
-
-  .case-components-block {
-    height: auto;
-  }
-
-  .case-components-layout {
-    min-height: 0;
-    flex-direction: column;
-  }
-
-  .case-components-create,
-  .case-components-slot,
-  .case-components-card {
-    min-height: 0;
-  }
-
-  .case-components-create {
-    max-width: none;
-    min-height: 320px;
-  }
-
-  .case-components-column {
-    min-height: 0;
-  }
-
-  .case-components-slot,
-  .case-components-card {
-    height: auto;
-    min-height: 170px;
-    justify-content: center;
-  }
-
-  .case-components-create-img,
-  .case-components-slot-img,
-  .case-components-card-img {
-    position: static;
-    left: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
   }
 
   .work-grid {
@@ -2207,29 +2151,6 @@ a {
   .case-hypotheses-title {
     font-size: 34px;
     letter-spacing: -0.68px;
-  }
-
-  .case-components-layout {
-    flex-direction: column;
-    padding: 0 8px;
-  }
-
-  .case-components-create {
-    width: 100%;
-    max-width: none;
-    aspect-ratio: auto;
-    min-height: 320px;
-  }
-
-  .case-components-column {
-    width: 100%;
-  }
-
-  .case-components-slot,
-  .case-components-card {
-    aspect-ratio: auto;
-    min-height: 170px;
-    justify-content: center;
   }
 
   .benefits-list {
