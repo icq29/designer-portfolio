@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260512-5720" />
+    <link rel="stylesheet" href="./styles.css?v=20260512-5730" />
   </head>
   <body>
     <main class="page page--case">
@@ -426,6 +426,11 @@
         if (!revealItems.length) return;
 
         revealItems.forEach(function (item, index) {
+          if (item.classList.contains("case-top")) {
+            item.classList.add("is-visible");
+            return;
+          }
+
           item.classList.add("reveal-item");
           item.style.setProperty("--reveal-delay", (index % 3) * 120 + "ms");
           if (item.getBoundingClientRect().top < window.innerHeight * 0.95) {
@@ -453,6 +458,7 @@
         );
 
         revealItems.forEach(function (item) {
+          if (!item.classList.contains("reveal-item")) return;
           if (item.classList.contains("is-visible")) return;
           observer.observe(item);
         });
