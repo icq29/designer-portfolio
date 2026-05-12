@@ -882,7 +882,7 @@ body {
 
 .case-components-layout {
   width: 100%;
-  min-height: 554px;
+  height: auto;
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
@@ -895,7 +895,8 @@ body {
   flex: 0 1 582px;
   width: 100%;
   max-width: 582px;
-  min-height: 554px;
+  min-height: 0;
+  aspect-ratio: 582 / 554;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
   background: var(--color-white);
@@ -907,11 +908,12 @@ body {
 
 .case-components-create-img {
   position: absolute;
-  left: calc(50% + 0.5px);
-  top: calc(50% - 0.5px);
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  width: 279px;
-  height: 373px;
+  width: 47.94%;
+  height: auto;
+  aspect-ratio: 279 / 373;
   object-fit: cover;
   display: block;
 }
@@ -919,7 +921,7 @@ body {
 .case-components-column {
   flex: 1 1 846px;
   min-width: 0;
-  min-height: 554px;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -927,7 +929,8 @@ body {
 
 .case-components-slot {
   position: relative;
-  height: 213px;
+  height: auto;
+  aspect-ratio: 846 / 213;
   border-radius: 12px;
   background: #f1f1f1;
   display: flex;
@@ -939,10 +942,11 @@ body {
 .case-components-slot-img {
   position: absolute;
   left: 50%;
-  top: calc(50% + 0.5px);
+  top: 50%;
   transform: translate(-50%, -50%);
-  width: 672px;
-  height: 102px;
+  width: 79.43%;
+  height: auto;
+  aspect-ratio: 672 / 102;
   border-radius: 10px;
   object-fit: cover;
   display: block;
@@ -962,11 +966,13 @@ body {
 
 .case-components-card-img {
   position: absolute;
-  left: 32px;
-  top: calc(50% + 33.5px);
+  left: 3.78%;
+  top: 60.18%;
   transform: translateY(-50%);
-  width: 975px;
-  height: 342px;
+  width: 115.25%;
+  height: auto;
+  aspect-ratio: 975 / 342;
+  max-width: none;
   object-fit: cover;
   display: block;
 }
