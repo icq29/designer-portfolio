@@ -4,16 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stanislav Ignatenko</title>
-    <script>
-      (function () {
-        var isDesktopDevice = window.matchMedia("(min-width: 1025px) and (hover: hover) and (pointer: fine)").matches;
-        if (!isDesktopDevice) return;
-        var preload = document.createElement("link");
-        preload.rel = "modulepreload";
-        preload.href = "./hero-svg3d.js?v=20260513-2";
-        document.head.appendChild(preload);
-      })();
-    </script>
+    <link rel="modulepreload" href="./hero-svg3d.js?v=20260513-3" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -69,7 +60,10 @@
               </a>
             </div>
           </header>
-          <div id="hero-svg3d" class="hero-figure reveal-item" aria-hidden="true"></div>
+          <div class="hero-figure reveal-item" id="hero-figure" aria-hidden="true">
+            <img class="hero-figure-static" src="/index-ui/hero-figure-static.webp" alt="" decoding="async" />
+            <div id="hero-svg3d"></div>
+          </div>
           <div class="hero-meta">
             <div class="hero-user">
               <img class="hero-avatar" src="/index-ui/hero-avatar.webp" alt="Stanislav Ignatenko" width="77" height="92" fetchpriority="high" decoding="async" />
@@ -279,31 +273,32 @@
     </main>
     <script>
       (function () {
+        var heroFigure = document.getElementById("hero-figure");
         var heroMount = document.getElementById("hero-svg3d");
         if (!heroMount) return;
         var isDesktopDevice = window.matchMedia("(min-width: 1025px) and (hover: hover) and (pointer: fine)").matches;
 
-        function renderHeroFallback() {
-          var fallback = document.createElement("img");
-          fallback.className = "hero-figure-static";
-          fallback.src = "/index-ui/hero-figure-static.webp";
-          fallback.alt = "";
-          fallback.setAttribute("aria-hidden", "true");
-          fallback.decoding = "async";
-          heroMount.innerHTML = "";
-          heroMount.appendChild(fallback);
-        }
-
         if (!isDesktopDevice) {
-          renderHeroFallback();
+          if (heroFigure) heroFigure.classList.add("is-static-only");
           return;
         }
 
         function loadHeroSvg3D() {
-          return import("./hero-svg3d.js?v=20260513-2");
+          return import("./hero-svg3d.js?v=20260513-3");
         }
 
-        loadHeroSvg3D().catch(renderHeroFallback);
+        function markAnimationReady() {
+          if (!heroFigure) return;
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              heroFigure.classList.add("is-animated-ready");
+            });
+          });
+        }
+
+        loadHeroSvg3D().then(markAnimationReady).catch(function () {
+          if (heroFigure) heroFigure.classList.add("is-static-only");
+        });
       })();
 
       (function () {
