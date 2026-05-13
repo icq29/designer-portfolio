@@ -8,7 +8,10 @@
 
 @font-face {
   font-family: "Halvar Breitschrift";
-  src: local("Halvar Breitschrift Light"), local("HalvarBreitschrift-Light");
+  src:
+    local("Halvar Breitschrift Light"),
+    local("HalvarBreitschrift-Light"),
+    url("/fonts/HalvarBreit-Rg.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -16,7 +19,10 @@
 
 @font-face {
   font-family: "Halvar Breitschrift";
-  src: local("Halvar Breitschrift Regular"), local("HalvarBreitschrift-Regular");
+  src:
+    local("Halvar Breitschrift Regular"),
+    local("HalvarBreitschrift-Regular"),
+    url("/fonts/HalvarBreit-Rg.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +30,10 @@
 
 @font-face {
   font-family: "Halvar Breitschrift";
-  src: local("Halvar Breitschrift Medium"), local("HalvarBreitschrift-Medium");
+  src:
+    local("Halvar Breitschrift Medium"),
+    local("HalvarBreitschrift-Medium"),
+    url("/fonts/HalvarBreit-Md.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -32,7 +41,10 @@
 
 @font-face {
   font-family: "Halvar Breitschrift";
-  src: local("Halvar Breitschrift Bold"), local("HalvarBreitschrift-Bold");
+  src:
+    local("Halvar Breitschrift Bold"),
+    local("HalvarBreitschrift-Bold"),
+    url("/fonts/HalvarBreit-Md.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
