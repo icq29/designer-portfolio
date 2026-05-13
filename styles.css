@@ -1190,6 +1190,20 @@ body {
   text-decoration: line-through;
 }
 
+.case-design-photo {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.case-design-photo-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920 / 1736;
+  object-fit: cover;
+}
+
 
 .header-brand {
   width: 176px;
