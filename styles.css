@@ -802,7 +802,8 @@ body {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  height: 598px;
+  height: auto;
+  aspect-ratio: 1920 / 598;
   box-sizing: border-box;
   padding: 0;
   background: #f1f1f1;
@@ -812,11 +813,9 @@ body {
 
 .case-demo-inner {
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  width: min(1363px, 100%);
-  height: 516px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   line-height: 0;
 }
 
@@ -825,6 +824,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .case-hypotheses {
@@ -2469,12 +2469,10 @@ a {
     column-gap: 32px;
   }
 
-  .case-demo,
   .case-demo-calendar {
     height: auto;
   }
 
-  .case-demo-inner,
   .case-demo-calendar-inner {
     position: static;
     transform: none;
@@ -2482,7 +2480,6 @@ a {
     height: auto;
   }
 
-  .case-demo-img,
   .case-demo-calendar-img {
     height: auto;
     object-fit: contain;
