@@ -665,7 +665,7 @@ body {
   --lenta-cell-h: 424px;
   --lenta-track-inner: calc(
     958px + var(--lenta-slide-gap) + 490px + var(--lenta-slide-gap) + 636px + var(--lenta-slide-gap) + 478px +
-      var(--lenta-slide-gap) + 400px + var(--lenta-slide-gap) + 670px
+      var(--lenta-slide-gap) + 400px + var(--lenta-slide-gap) + 670px + var(--lenta-slide-gap) + 566px
   );
   --lenta-shift: calc(var(--lenta-track-inner) + var(--lenta-slide-gap));
   width: 100vw;
@@ -748,6 +748,11 @@ body {
 .case-lenta-cell--670 {
   width: 670px;
   flex: 0 0 670px;
+}
+
+.case-lenta-cell--566 {
+  width: 566px;
+  flex: 0 0 566px;
 }
 
 .case-lenta-cell img {
