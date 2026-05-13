@@ -9,7 +9,7 @@ if (mountNode) {
     <SVG3D
       text="Si."
       font="Pacifico"
-      smoothness={0.6}
+      smoothness={0.45}
       material="metal"
       metalness={0.9}
       roughness={0.2}
