@@ -18,6 +18,11 @@
       "source": "/case.html",
       "destination": "/tgpost-case",
       "permanent": false
+    },
+    {
+      "source": "/tgpost-case.html",
+      "destination": "/tgpost-case",
+      "permanent": false
     }
   ],
   "rewrites": [
