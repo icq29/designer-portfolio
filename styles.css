@@ -1,9 +1,6 @@
 @font-face {
   font-family: "Halvar Breitschrift";
-  src:
-    local("Halvar Breitschrift Light"),
-    local("HalvarBreitschrift-Light"),
-    url("./fonts/HalvarBreitschrift-Light.woff2") format("woff2");
+  src: local("Halvar Breitschrift Light"), local("HalvarBreitschrift-Light");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -11,10 +8,7 @@
 
 @font-face {
   font-family: "Halvar Breitschrift";
-  src:
-    local("Halvar Breitschrift Regular"),
-    local("HalvarBreitschrift-Regular"),
-    url("./fonts/HalvarBreitschrift-Regular.woff2") format("woff2");
+  src: local("Halvar Breitschrift Regular"), local("HalvarBreitschrift-Regular");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -22,10 +16,7 @@
 
 @font-face {
   font-family: "Halvar Breitschrift";
-  src:
-    local("Halvar Breitschrift Medium"),
-    local("HalvarBreitschrift-Medium"),
-    url("./fonts/HalvarBreitschrift-Medium.woff2") format("woff2");
+  src: local("Halvar Breitschrift Medium"), local("HalvarBreitschrift-Medium");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -33,10 +24,7 @@
 
 @font-face {
   font-family: "Halvar Breitschrift";
-  src:
-    local("Halvar Breitschrift Bold"),
-    local("HalvarBreitschrift-Bold"),
-    url("./fonts/HalvarBreitschrift-Bold.woff2") format("woff2");
+  src: local("Halvar Breitschrift Bold"), local("HalvarBreitschrift-Bold");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -44,10 +32,7 @@
 
 @font-face {
   font-family: "Proxima Nova";
-  src:
-    local("Proxima Nova Regular"),
-    local("ProximaNova-Regular"),
-    url("./fonts/ProximaNova-Regular.woff2") format("woff2");
+  src: local("Proxima Nova Regular"), local("ProximaNova-Regular");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
