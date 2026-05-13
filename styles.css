@@ -802,7 +802,7 @@ body {
   margin-right: calc(50% - 50vw);
   height: 598px;
   box-sizing: border-box;
-  padding: 24px 24px 0;
+  padding: 0;
   background: #f1f1f1;
   position: relative;
   overflow: hidden;
@@ -813,8 +813,8 @@ body {
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
-  width: min(1208px, calc(100% - 48px));
-  height: 518px;
+  width: min(1363px, 100%);
+  height: 516px;
   line-height: 0;
 }
 
@@ -1103,13 +1103,15 @@ body {
   font-size: 42px;
   font-weight: 400;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.84px;
   text-transform: uppercase;
-  color: var(--color-black);
+  color: #161616;
 }
 
 .case-design-system-text-subtitle {
   margin: 0;
+  width: 612px;
+  max-width: 100%;
   font-family: var(--font-tags);
   font-size: 15px;
   font-weight: 400;
