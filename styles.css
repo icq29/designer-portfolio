@@ -828,13 +828,12 @@ body {
 .case-hypotheses {
   width: 100%;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   gap: 32px;
 }
 
 .case-hypotheses-title-wrap {
-  flex: 1 1 0;
-  min-width: 0;
+  width: 100%;
 }
 
 .case-hypotheses-title {
@@ -851,18 +850,32 @@ body {
 }
 
 .case-hypotheses-list {
-  width: 678px;
-  max-width: 100%;
-  flex: 0 0 auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 0;
 }
 
 .case-hypothesis-item {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+}
+
+.case-hypothesis-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.case-hypothesis-item:first-child {
+  padding-bottom: 32px;
+}
+
+.case-hypothesis-item:not(:first-child):not(:last-child) {
+  padding: 32px 0;
+}
+
+.case-hypothesis-item:last-child {
+  padding-top: 32px;
 }
 
 .case-hypothesis-item h3 {
@@ -905,16 +918,31 @@ body {
 
 .case-results-list {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 102px;
-  row-gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .case-results-item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
+}
+
+.case-results-item:not(:last-child) {
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.case-results-item:first-child {
+  padding-bottom: 32px;
+}
+
+.case-results-item:not(:first-child):not(:last-child) {
+  padding: 32px 0;
+}
+
+.case-results-item:last-child {
+  padding-top: 32px;
 }
 
 .case-results-item h3 {
@@ -927,31 +955,14 @@ body {
   color: #0e0e0e;
 }
 
-.case-results-note {
-  width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 18px;
-  border-radius: 12px;
-  background: #f1f1f1;
-}
-
-.case-results-note img {
-  flex: 0 0 20px;
-  width: 20px;
-  height: 20px;
-}
-
-.case-results-note p {
+.case-results-item p {
   margin: 0;
   font-family: var(--font-tags);
   font-weight: 400;
   font-size: 15px;
   line-height: 1.5;
   letter-spacing: 0.3px;
-  color: #0e0e0e;
+  color: var(--color-grey);
 }
 
 .case-demo-calendar {
