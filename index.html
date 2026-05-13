@@ -271,6 +271,23 @@
       (function () {
         var heroMount = document.getElementById("hero-svg3d");
         if (!heroMount) return;
+        var isDesktopDevice = window.matchMedia("(min-width: 1025px) and (hover: hover) and (pointer: fine)").matches;
+
+        function renderHeroFallback() {
+          var fallback = document.createElement("img");
+          fallback.className = "hero-figure-static";
+          fallback.src = "/index-ui/hero-figure-static.svg";
+          fallback.alt = "";
+          fallback.setAttribute("aria-hidden", "true");
+          fallback.decoding = "async";
+          heroMount.innerHTML = "";
+          heroMount.appendChild(fallback);
+        }
+
+        if (!isDesktopDevice) {
+          renderHeroFallback();
+          return;
+        }
 
         function loadHeroSvg3D() {
           import("./hero-svg3d.js?v=20260513-1");
