@@ -1029,6 +1029,182 @@ body {
   filter: none;
 }
 
+.case-guidelines {
+  width: 100%;
+}
+
+.case-guidelines-inner {
+  width: 100%;
+  border-radius: 12px;
+  background: #f1f1f1;
+  padding: 52px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.case-guidelines-heading {
+  margin: 0;
+  font-family: var(--font-tags);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  color: #252525;
+}
+
+.case-guidelines-heading--right {
+  text-align: right;
+}
+
+.case-guidelines-palette {
+  position: relative;
+  height: 304px;
+  margin-top: 26px;
+}
+
+.case-guidelines-swatch {
+  position: absolute;
+  width: 33.2%;
+  min-width: 220px;
+  max-width: 491px;
+  height: 220px;
+  border-radius: 24px;
+  padding: 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.case-guidelines-swatch p,
+.case-guidelines-swatch span {
+  margin: 0;
+  font-family: var(--font-tags);
+  line-height: 1;
+  text-align: right;
+}
+
+.case-guidelines-swatch p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.case-guidelines-swatch span {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.32px;
+}
+
+.case-guidelines-swatch--turquoise-900 {
+  left: 0;
+  top: 0;
+  z-index: 5;
+  background: #2abcc0;
+  color: var(--color-white);
+}
+
+.case-guidelines-swatch--turquoise-50 {
+  left: 16.5%;
+  top: 35px;
+  z-index: 4;
+  background: #f0fcfb;
+  color: #252525;
+}
+
+.case-guidelines-swatch--neutral-50 {
+  left: 33%;
+  top: 70px;
+  z-index: 3;
+  background: var(--color-white);
+  color: #252525;
+}
+
+.case-guidelines-swatch--neutral-75 {
+  left: 49.5%;
+  top: 104px;
+  z-index: 2;
+  background: #f4f4f4;
+  border: 1px solid #e6e6e6;
+  color: #252525;
+}
+
+.case-guidelines-swatch--neutral-900 {
+  left: 66%;
+  top: 139px;
+  z-index: 1;
+  background: #111111;
+  color: var(--color-white);
+}
+
+.case-guidelines-divider {
+  width: 100%;
+  height: 1px;
+  background: #d9d9d9;
+  display: block;
+}
+
+.case-guidelines-type {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.case-guidelines-type-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.case-guidelines-family {
+  margin: 0;
+  font-family: var(--font-tags);
+  font-weight: 500;
+  font-size: clamp(46px, 7vw, 82px);
+  line-height: 1;
+  color: #252525;
+}
+
+.case-guidelines-weights,
+.case-guidelines-samples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.case-guidelines-weights p,
+.case-guidelines-samples p {
+  margin: 0;
+  font-family: var(--font-tags);
+  font-size: 36px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.case-guidelines-weights p {
+  font-size: 24px;
+  color: #535353;
+}
+
+.case-guidelines-samples--upper {
+  color: #535353;
+}
+
+.case-guidelines-samples--lower {
+  color: #adadad;
+}
+
+.case-guidelines-samples--numbers {
+  color: #535353;
+}
+
+.case-guidelines-samples--strike {
+  text-decoration: line-through;
+}
+
 
 .header-brand {
   width: 176px;
@@ -2200,6 +2376,33 @@ a {
     object-fit: contain;
   }
 
+  .case-guidelines-inner {
+    padding: 42px 32px;
+  }
+
+  .case-guidelines-palette {
+    height: 272px;
+  }
+
+  .case-guidelines-swatch {
+    min-width: 180px;
+    height: 192px;
+    padding: 24px;
+  }
+
+  .case-guidelines-swatch p {
+    font-size: 18px;
+  }
+
+  .case-guidelines-swatch span {
+    font-size: 15px;
+    letter-spacing: 0.3px;
+  }
+
+  .case-guidelines-type-row {
+    flex-wrap: wrap;
+  }
+
   .work-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2279,6 +2482,56 @@ a {
   }
 
   .case-design-system-text-subtitle {
+    white-space: normal;
+  }
+
+  .case-guidelines-inner {
+    padding: 32px 24px;
+    gap: 32px;
+  }
+
+  .case-guidelines-heading {
+    font-size: 34px;
+    letter-spacing: -0.68px;
+  }
+
+  .case-guidelines-heading--right {
+    text-align: left;
+  }
+
+  .case-guidelines-palette {
+    margin-top: 18px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .case-guidelines-swatch {
+    position: static;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    height: 172px;
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  .case-guidelines-type {
+    gap: 24px;
+  }
+
+  .case-guidelines-type-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .case-guidelines-family {
+    font-size: clamp(42px, 14vw, 72px);
+  }
+
+  .case-guidelines-weights p,
+  .case-guidelines-samples p {
     white-space: normal;
   }
 
