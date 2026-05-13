@@ -1053,23 +1053,19 @@ body {
   color: #252525;
 }
 
-.case-guidelines-heading--right {
-  text-align: right;
-}
-
 .case-guidelines-palette {
-  position: relative;
-  height: 304px;
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
   margin-top: 26px;
 }
 
 .case-guidelines-swatch {
-  position: absolute;
-  width: 33.2%;
-  min-width: 220px;
-  max-width: 491px;
-  height: 220px;
-  border-radius: 24px;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 362px;
+  border-radius: 12px;
   padding: 32px;
   box-sizing: border-box;
   display: flex;
@@ -1089,52 +1085,37 @@ body {
 
 .case-guidelines-swatch p {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .case-guidelines-swatch span {
   font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.32px;
+  font-size: 15px;
+  letter-spacing: 0.3px;
 }
 
 .case-guidelines-swatch--turquoise-900 {
-  left: 0;
-  top: 0;
-  z-index: 5;
   background: #2abcc0;
   color: var(--color-white);
 }
 
 .case-guidelines-swatch--turquoise-50 {
-  left: 16.5%;
-  top: 35px;
-  z-index: 4;
   background: #f0fcfb;
   color: #252525;
 }
 
 .case-guidelines-swatch--neutral-50 {
-  left: 33%;
-  top: 70px;
-  z-index: 3;
   background: var(--color-white);
   color: #252525;
 }
 
 .case-guidelines-swatch--neutral-75 {
-  left: 49.5%;
-  top: 104px;
-  z-index: 2;
   background: #f4f4f4;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #c5c5c5;
   color: #252525;
 }
 
 .case-guidelines-swatch--neutral-900 {
-  left: 66%;
-  top: 139px;
-  z-index: 1;
   background: #111111;
   color: var(--color-white);
 }
@@ -1163,7 +1144,7 @@ body {
   margin: 0;
   font-family: var(--font-tags);
   font-weight: 500;
-  font-size: clamp(46px, 7vw, 82px);
+  font-size: clamp(52px, 6vw, 72px);
   line-height: 1;
   color: #252525;
 }
@@ -1179,13 +1160,12 @@ body {
 .case-guidelines-samples p {
   margin: 0;
   font-family: var(--font-tags);
-  font-size: 36px;
+  font-size: 20px;
   line-height: 1;
   white-space: nowrap;
 }
 
 .case-guidelines-weights p {
-  font-size: 24px;
   color: #535353;
 }
 
@@ -2380,23 +2360,9 @@ a {
     padding: 42px 32px;
   }
 
-  .case-guidelines-palette {
-    height: 272px;
-  }
-
   .case-guidelines-swatch {
-    min-width: 180px;
-    height: 192px;
+    height: 300px;
     padding: 24px;
-  }
-
-  .case-guidelines-swatch p {
-    font-size: 18px;
-  }
-
-  .case-guidelines-swatch span {
-    font-size: 15px;
-    letter-spacing: 0.3px;
   }
 
   .case-guidelines-type-row {
@@ -2495,24 +2461,13 @@ a {
     letter-spacing: -0.68px;
   }
 
-  .case-guidelines-heading--right {
-    text-align: left;
-  }
-
   .case-guidelines-palette {
     margin-top: 18px;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    flex-direction: column;
   }
 
   .case-guidelines-swatch {
-    position: static;
-    width: 100%;
-    max-width: none;
-    min-width: 0;
-    height: 172px;
+    height: 168px;
     border-radius: 16px;
     padding: 20px;
   }
