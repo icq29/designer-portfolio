@@ -584,6 +584,7 @@
         if (!caseContainer) return;
 
         var revealItems = Array.prototype.slice.call(caseContainer.children);
+        var groupRevealItems = Array.prototype.slice.call(caseContainer.querySelectorAll("[data-reveal-group] .reveal-item"));
         if (!revealItems.length) return;
 
         revealItems.forEach(function (item, index) {
@@ -599,9 +600,23 @@
           }
         });
 
+        var groups = Array.prototype.slice.call(caseContainer.querySelectorAll("[data-reveal-group]"));
+        groups.forEach(function (group) {
+          var groupItems = Array.prototype.slice.call(group.querySelectorAll(".reveal-item"));
+          groupItems.forEach(function (item, index) {
+            item.style.setProperty("--reveal-delay", index * 120 + "ms");
+            if (item.getBoundingClientRect().top < window.innerHeight * 0.95) {
+              item.classList.add("is-visible");
+            }
+          });
+        });
+
         var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         if (prefersReducedMotion || !("IntersectionObserver" in window)) {
           revealItems.forEach(function (item) {
+            item.classList.add("is-visible");
+          });
+          groupRevealItems.forEach(function (item) {
             item.classList.add("is-visible");
           });
           return;
@@ -620,6 +635,11 @@
 
         revealItems.forEach(function (item) {
           if (!item.classList.contains("reveal-item")) return;
+          if (item.classList.contains("is-visible")) return;
+          observer.observe(item);
+        });
+
+        groupRevealItems.forEach(function (item) {
           if (item.classList.contains("is-visible")) return;
           observer.observe(item);
         });
