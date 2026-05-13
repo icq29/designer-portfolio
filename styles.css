@@ -1053,6 +1053,11 @@ body {
   color: #252525;
 }
 
+.case-guidelines-color {
+  padding: 42px;
+  box-sizing: border-box;
+}
+
 .case-guidelines-palette {
   display: flex;
   align-items: stretch;
