@@ -340,15 +340,15 @@ body {
   margin-right: calc(50% - 50vw);
   height: auto;
   background: #f1f1f1;
-  padding: 16px 24px 0;
+  padding: 42px 24px 0;
 }
 
 .case-cover-frame {
   position: relative;
   flex: 0 0 auto;
-  width: min(1234px, 100%);
+  width: min(1117px, 100%);
   height: auto;
-  aspect-ratio: 1234 / 276;
+  aspect-ratio: 1117 / 250;
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
