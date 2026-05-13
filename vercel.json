@@ -8,12 +8,26 @@
       "source": "/",
       "destination": "/home",
       "permanent": false
+    },
+    {
+      "source": "/case",
+      "destination": "/tgpost-case",
+      "permanent": false
+    },
+    {
+      "source": "/case.html",
+      "destination": "/tgpost-case",
+      "permanent": false
     }
   ],
   "rewrites": [
     {
       "source": "/home",
       "destination": "/index.html"
+    },
+    {
+      "source": "/tgpost-case",
+      "destination": "/tgpost-case.html"
     }
   ],
   "git": {

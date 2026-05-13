@@ -9,7 +9,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, "index.html"),
-        case: path.resolve(__dirname, "case.html"),
+        tgpostCase: path.resolve(__dirname, "tgpost-case.html"),
       },
     },
   },
