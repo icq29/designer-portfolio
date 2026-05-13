@@ -268,8 +268,30 @@
         </section>
       </div>
     </main>
-    <script type="module" src="./hero-svg3d.js?v=20260507-2020"></script>
     <script>
+      (function () {
+        var heroMount = document.getElementById("hero-svg3d");
+        if (!heroMount) return;
+
+        function loadHeroSvg3D() {
+          import("./hero-svg3d.js?v=20260513-1");
+        }
+
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(loadHeroSvg3D, { timeout: 1200 });
+          return;
+        }
+
+        if (document.readyState === "complete") {
+          setTimeout(loadHeroSvg3D, 0);
+          return;
+        }
+
+        window.addEventListener("load", function () {
+          setTimeout(loadHeroSvg3D, 0);
+        }, { once: true });
+      })();
+
       (function () {
         var timeNode = document.getElementById("minsk-time");
         if (!timeNode) return;
