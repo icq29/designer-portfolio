@@ -290,22 +290,10 @@
         }
 
         function loadHeroSvg3D() {
-          import("./hero-svg3d.js?v=20260513-1");
+          return import("./hero-svg3d.js?v=20260513-1");
         }
 
-        if ("requestIdleCallback" in window) {
-          window.requestIdleCallback(loadHeroSvg3D, { timeout: 1200 });
-          return;
-        }
-
-        if (document.readyState === "complete") {
-          setTimeout(loadHeroSvg3D, 0);
-          return;
-        }
-
-        window.addEventListener("load", function () {
-          setTimeout(loadHeroSvg3D, 0);
-        }, { once: true });
+        loadHeroSvg3D().catch(renderHeroFallback);
       })();
 
       (function () {
