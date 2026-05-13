@@ -4,12 +4,24 @@ import { SVG3D } from "3dsvg";
 
 const mountNode = document.getElementById("hero-svg3d");
 
-if (mountNode) {
-  createRoot(mountNode).render(
+function HeroSvg3D() {
+  const [smoothness, setSmoothness] = React.useState(0.28);
+
+  React.useEffect(() => {
+    const timerId = window.setTimeout(() => {
+      setSmoothness(0.45);
+    }, 850);
+
+    return () => {
+      window.clearTimeout(timerId);
+    };
+  }, []);
+
+  return (
     <SVG3D
       text="Si."
       font="Pacifico"
-      smoothness={0.45}
+      smoothness={smoothness}
       material="metal"
       metalness={0.9}
       roughness={0.2}
@@ -24,4 +36,8 @@ if (mountNode) {
       intro="none"
     />
   );
+}
+
+if (mountNode) {
+  createRoot(mountNode).render(<HeroSvg3D />);
 }
