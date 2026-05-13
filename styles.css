@@ -893,17 +893,10 @@ body {
 
 .case-results-list {
   width: 100%;
-  display: flex;
-  align-items: flex-start;
-  gap: 102px;
-}
-
-.case-results-column {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 52px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 102px;
+  row-gap: 32px;
 }
 
 .case-results-item {
@@ -930,7 +923,7 @@ body {
   gap: 14px;
   padding: 18px;
   border-radius: 12px;
-  background: #ebffed;
+  background: #f1f1f1;
 }
 
 .case-results-note img {
@@ -2439,11 +2432,7 @@ a {
   }
 
   .case-results-list {
-    gap: 32px;
-  }
-
-  .case-results-column {
-    gap: 32px;
+    column-gap: 32px;
   }
 
   .case-demo,
@@ -2561,12 +2550,7 @@ a {
   }
 
   .case-results-list {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .case-results-column {
-    width: 100%;
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 
