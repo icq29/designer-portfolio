@@ -2065,6 +2065,15 @@ a {
   opacity: 1;
 }
 
+@supports (content-visibility: auto) {
+  .work,
+  .experience,
+  .footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
+  }
+}
+
 @media (max-width: 1268px) {
   .case-components-layout {
     flex-direction: column;
