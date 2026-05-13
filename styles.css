@@ -1110,7 +1110,7 @@ body {
 
 .case-design-system-text-subtitle {
   margin: 0;
-  width: 612px;
+  width: 601px;
   max-width: 100%;
   font-family: var(--font-tags);
   font-size: 15px;
@@ -1118,7 +1118,6 @@ body {
   line-height: 1.5;
   letter-spacing: 0.3px;
   color: var(--color-grey);
-  white-space: nowrap;
 }
 
 .page--case .case-design-system-text.reveal-item {
@@ -1149,7 +1148,7 @@ body {
   font-weight: 400;
   font-size: 32px;
   line-height: 1;
-  color: #252525;
+  color: #0e0e0e;
 }
 
 .case-guidelines-color {
@@ -1171,13 +1170,13 @@ body {
   min-width: 0;
   height: 362px;
   border-radius: 12px;
-  padding: 32px;
+  padding: 42px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 10px;
 }
 
 .case-guidelines-swatch p,
@@ -1240,7 +1239,7 @@ body {
 
 .case-guidelines-type-row {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 32px;
 }
@@ -1249,7 +1248,7 @@ body {
   margin: 0;
   font-family: var(--font-tags);
   font-weight: 500;
-  font-size: clamp(52px, 6vw, 72px);
+  font-size: 72px;
   line-height: 1;
   color: #252525;
 }
@@ -1271,19 +1270,19 @@ body {
 }
 
 .case-guidelines-weights p {
-  color: #535353;
+  color: var(--color-grey);
 }
 
 .case-guidelines-samples--upper {
-  color: #535353;
+  color: var(--color-grey);
 }
 
 .case-guidelines-samples--lower {
-  color: #adadad;
+  color: var(--color-gray-300);
 }
 
 .case-guidelines-samples--numbers {
-  color: #535353;
+  color: var(--color-grey);
 }
 
 .case-guidelines-samples--strike {
