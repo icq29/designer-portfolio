@@ -1054,8 +1054,9 @@ body {
 }
 
 .case-guidelines-color {
-  padding: 42px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
 }
 
 .case-guidelines-palette {
@@ -1063,7 +1064,7 @@ body {
   align-items: stretch;
   gap: 12px;
   width: 100%;
-  margin-top: 26px;
+  margin-top: 0;
 }
 
 .case-guidelines-swatch {
@@ -2481,7 +2482,7 @@ a {
   }
 
   .case-guidelines-palette {
-    margin-top: 18px;
+    margin-top: 0;
     flex-direction: column;
   }
 
