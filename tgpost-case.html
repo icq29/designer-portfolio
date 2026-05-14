@@ -655,7 +655,11 @@
 
         revealItems.forEach(function (item, index) {
           if (item.classList.contains("case-top")) {
-            item.classList.add("is-visible");
+            item.classList.add("reveal-item");
+            item.style.setProperty("--reveal-delay", "0ms");
+            requestAnimationFrame(function () {
+              item.classList.add("is-visible");
+            });
             return;
           }
 
