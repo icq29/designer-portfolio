@@ -1186,9 +1186,10 @@ body {
 }
 
 .case-components-create {
-  flex: 0 0 40.4167%;
+  flex: 582 1 0;
   min-width: 0;
   aspect-ratio: 582 / 480;
+  padding: 62px;
   box-sizing: border-box;
   border: 1px solid #e1e1e1;
   border-radius: 12px;
@@ -1200,26 +1201,27 @@ body {
 }
 
 .case-components-create-img {
-  width: 100%;
+  width: min(269px, 100%);
   height: auto;
-  max-width: 267px;
-  aspect-ratio: 267 / 357;
+  max-width: 100%;
+  aspect-ratio: 269 / 360;
   object-fit: cover;
   display: block;
 }
 
 .case-components-column {
-  flex: 0 0 58.75%;
+  flex: 846 1 0;
   min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: hidden;
 }
 
 .case-components-slot {
   width: 100%;
   aspect-ratio: 846 / 140;
-  padding: 6.6206% 20.331%;
+  padding: 32px 52px;
   box-sizing: border-box;
   border-radius: 12px;
   background: #f1f1f1;
@@ -1230,18 +1232,18 @@ body {
 }
 
 .case-components-slot-img {
-  width: 100%;
+  width: min(500px, 100%);
   height: auto;
-  max-width: 502px;
-  aspect-ratio: 502 / 76;
+  max-width: 100%;
+  aspect-ratio: 500 / 76;
   object-fit: cover;
-  border-radius: 8px;
   display: block;
 }
 
 .case-components-card-img {
-  width: 100%;
+  width: min(798px, 100%);
   height: auto;
+  max-width: 100%;
   aspect-ratio: 798 / 280;
   object-fit: cover;
   display: block;
@@ -1250,7 +1252,7 @@ body {
 .case-components-card {
   width: 100%;
   aspect-ratio: 846 / 328;
-  padding: 2.837%;
+  padding: 32px;
   box-sizing: border-box;
   border-radius: 12px;
   background: #f1f1f1;
@@ -2584,14 +2586,14 @@ a {
     flex-basis: auto;
     width: 100%;
     aspect-ratio: auto;
-    padding: 42px 0;
+    padding: 42px;
     box-sizing: border-box;
   }
 
   .case-components-create-img {
-    width: 267px;
-    height: 357px;
-    max-width: 267px;
+    width: min(269px, 100%);
+    height: auto;
+    max-width: 100%;
   }
 
   .case-components-column {
