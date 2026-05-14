@@ -987,6 +987,7 @@ body {
   line-height: 1.2;
   letter-spacing: -0.84px;
   text-transform: uppercase;
+  fill: #161616;
   color: #161616;
   -webkit-text-fill-color: #161616;
 }
@@ -1000,6 +1001,7 @@ body {
   font-size: 15px;
   line-height: 1.5;
   letter-spacing: 0.3px;
+  fill: #5d5d5d;
   color: #5d5d5d;
   -webkit-text-fill-color: #5d5d5d;
   text-align: right;
