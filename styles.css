@@ -1468,8 +1468,8 @@ body {
 
 .case-design-photo {
   width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
+  border-radius: 0;
+  overflow: visible;
 }
 
 .case-design-photo-img {
