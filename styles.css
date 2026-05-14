@@ -1076,29 +1076,30 @@ body {
 
 .case-mobile-demo {
   width: 100%;
-  height: 582px;
+  height: auto;
+  box-sizing: border-box;
+  padding: 82px 102px 0;
   border-radius: 12px;
   background: #f1f1f1;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   overflow: hidden;
 }
 
 .case-mobile-demo-inner {
-  position: absolute;
-  left: 50%;
-  top: 32px;
-  transform: translateX(-50%);
   width: min(835px, 100%);
   aspect-ratio: 835 / 550;
   height: auto;
+  overflow: hidden;
   line-height: 0;
 }
 
 .case-mobile-demo-inner img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 .case-conclusion {
@@ -2687,13 +2688,11 @@ a {
   }
 
   .case-mobile-demo {
-    height: auto;
-    aspect-ratio: 1920 / 582;
+    padding: 52px 52px 0;
   }
 
   .case-mobile-demo-inner {
-    top: 5.5%;
-    width: min(835px, calc(100% - 40px));
+    width: min(835px, 100%);
   }
 
   .case-demo-calendar {
@@ -2838,6 +2837,14 @@ a {
 
   .case-mobile-cards {
     flex-direction: column;
+  }
+
+  .case-mobile-demo {
+    padding: 24px 24px 0;
+  }
+
+  .case-mobile-demo-inner {
+    width: min(835px, 100%);
   }
 
   .case-mobile-card {
