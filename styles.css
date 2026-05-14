@@ -969,6 +969,159 @@ body {
   color: var(--color-grey);
 }
 
+.case-mobile-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 62px;
+}
+
+.case-mobile-text-title {
+  margin: 0;
+  width: 930px;
+  max-width: 100%;
+  flex: 0 0 auto;
+  font-family: var(--font-halvar);
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: -0.84px;
+  text-transform: uppercase;
+  color: #161616;
+}
+
+.case-mobile-text-body {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--font-tags);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: var(--color-grey);
+  text-align: right;
+}
+
+.case-mobile-cards {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+}
+
+.case-mobile-card {
+  position: relative;
+  overflow: hidden;
+  height: 564px;
+  border-radius: 12px;
+  background: #f1f1f1;
+}
+
+.case-mobile-card--left {
+  flex: 0 0 689px;
+}
+
+.case-mobile-card--right {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.case-mobile-card-media {
+  position: absolute;
+  bottom: 0;
+  line-height: 0;
+}
+
+.case-mobile-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-mobile-card-media--left {
+  left: 49.5px;
+  width: 590px;
+  height: 483px;
+}
+
+.case-mobile-card-media--right {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 738px;
+  height: 529px;
+}
+
+.case-mobile-demo {
+  width: 100%;
+  height: 582px;
+  border-radius: 12px;
+  background: #f1f1f1;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-mobile-demo-inner {
+  position: absolute;
+  left: 50%;
+  top: 32px;
+  transform: translateX(-50%);
+  width: min(835px, 100%);
+  aspect-ratio: 835 / 550;
+  height: auto;
+  line-height: 0;
+}
+
+.case-mobile-demo-inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-conclusion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.case-conclusion-title {
+  margin: 0;
+  font-family: var(--font-halvar);
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: -0.84px;
+  text-transform: uppercase;
+  color: #161616;
+}
+
+.case-conclusion-card {
+  width: 100%;
+  border: 1px solid var(--color-gray-100);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.case-conclusion-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.case-conclusion-body {
+  margin: 0;
+  font-family: var(--font-tags);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: var(--color-grey);
+}
+
 .case-demo-calendar {
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -2471,6 +2624,52 @@ a {
     column-gap: 32px;
   }
 
+  .case-mobile-text {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .case-mobile-text-title {
+    width: auto;
+  }
+
+  .case-mobile-text-body {
+    width: 100%;
+    text-align: left;
+  }
+
+  .case-mobile-card {
+    height: clamp(360px, 42vw, 564px);
+  }
+
+  .case-mobile-card--left {
+    flex: 1 1 0;
+  }
+
+  .case-mobile-card-media--left {
+    left: 32px;
+    width: min(590px, calc(100% - 64px));
+    height: auto;
+    aspect-ratio: 590 / 483;
+  }
+
+  .case-mobile-card-media--right {
+    width: min(738px, calc(100% - 32px));
+    height: auto;
+    aspect-ratio: 738 / 529;
+  }
+
+  .case-mobile-demo {
+    height: auto;
+    aspect-ratio: 1920 / 582;
+  }
+
+  .case-mobile-demo-inner {
+    top: 5.5%;
+    width: min(835px, calc(100% - 40px));
+  }
+
   .case-demo-calendar {
     height: auto;
   }
@@ -2604,6 +2803,44 @@ a {
   .case-guidelines-heading {
     font-size: 34px;
     letter-spacing: -0.68px;
+  }
+
+  .case-mobile-text-title,
+  .case-conclusion-title {
+    font-size: 34px;
+    letter-spacing: -0.68px;
+  }
+
+  .case-mobile-cards {
+    flex-direction: column;
+  }
+
+  .case-mobile-card {
+    height: auto;
+    aspect-ratio: 1920 / 564;
+  }
+
+  .case-mobile-card--left,
+  .case-mobile-card--right {
+    flex: 0 0 auto;
+  }
+
+  .case-mobile-card-media--left {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(590px, calc(100% - 32px));
+  }
+
+  .case-mobile-text-body {
+    text-align: left;
+  }
+
+  .case-conclusion {
+    gap: 32px;
+  }
+
+  .case-conclusion-card {
+    padding: 20px;
   }
 
   .case-guidelines-palette {
