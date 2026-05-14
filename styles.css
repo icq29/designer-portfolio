@@ -978,9 +978,8 @@ body {
 
 .case-mobile-text-title {
   margin: 0;
-  width: 930px;
-  max-width: 100%;
-  flex: 0 0 auto;
+  flex: 1 0 0;
+  min-width: 0;
   font-family: var(--font-halvar);
   font-weight: 400;
   font-size: 42px;
@@ -994,7 +993,7 @@ body {
 
 .case-mobile-text-body {
   margin: 0;
-  flex: 1 1 auto;
+  flex: 1 0 0;
   min-width: 0;
   font-family: var(--font-tags);
   font-weight: 400;
