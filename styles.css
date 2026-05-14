@@ -988,6 +988,7 @@ body {
   letter-spacing: -0.84px;
   text-transform: uppercase;
   color: #161616;
+  -webkit-text-fill-color: #161616;
 }
 
 .case-mobile-text-body {
@@ -999,7 +1000,8 @@ body {
   font-size: 15px;
   line-height: 1.5;
   letter-spacing: 0.3px;
-  color: var(--color-grey);
+  color: #5d5d5d;
+  -webkit-text-fill-color: #5d5d5d;
   text-align: right;
 }
 
