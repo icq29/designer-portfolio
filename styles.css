@@ -807,8 +807,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 82px 24px 0;
+  justify-content: flex-end;
+  padding: 52px 52px 0;
   background: #f1f1f1;
   overflow: hidden;
 }
@@ -819,7 +819,6 @@ body {
   width: min(1363px, 100%);
   aspect-ratio: 1363 / 516;
   height: auto;
-  border-radius: 12px;
   overflow: hidden;
   line-height: 0;
 }
@@ -828,7 +827,6 @@ body {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  border-radius: inherit;
   pointer-events: none;
 }
 
