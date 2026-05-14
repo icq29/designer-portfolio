@@ -2665,7 +2665,7 @@ a {
   }
 
   .case-mobile-card {
-    height: clamp(360px, 42vw, 564px);
+    height: 564px;
   }
 
   .case-mobile-card--left {
@@ -2841,8 +2841,7 @@ a {
   }
 
   .case-mobile-card {
-    height: auto;
-    aspect-ratio: 1920 / 564;
+    height: 564px;
     padding: 24px 24px 0;
   }
 
