@@ -2572,6 +2572,19 @@ a {
     content-visibility: auto;
     contain-intrinsic-size: 1000px;
   }
+
+  .page--case .case-lenta,
+  .page--case .case-demo,
+  .page--case .case-components-block,
+  .page--case .case-guidelines,
+  .page--case .case-design-photo,
+  .page--case .case-demo-calendar,
+  .page--case .case-mobile-cards,
+  .page--case .case-mobile-demo,
+  .page--case .case-conclusion {
+    content-visibility: auto;
+    contain-intrinsic-size: 700px;
+  }
 }
 
 @media (max-width: 1268px) {
