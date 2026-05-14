@@ -658,7 +658,9 @@
             item.classList.add("reveal-item");
             item.style.setProperty("--reveal-delay", "0ms");
             requestAnimationFrame(function () {
-              item.classList.add("is-visible");
+              requestAnimationFrame(function () {
+                item.classList.add("is-visible");
+              });
             });
             return;
           }
