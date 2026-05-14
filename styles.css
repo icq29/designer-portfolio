@@ -813,8 +813,8 @@ body {
 .case-demo-inner {
   position: absolute;
   left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
+  top: calc(50% + 41px);
+  transform: translate(-50%, -50%);
   width: min(1363px, 100%);
   aspect-ratio: 1363 / 516;
   height: auto;
@@ -1044,15 +1044,17 @@ body {
 
 .case-mobile-card-media--left {
   left: 49.5px;
-  width: 590px;
-  height: 483px;
+  width: min(590px, 100%);
+  height: auto;
+  aspect-ratio: 590 / 483;
 }
 
 .case-mobile-card-media--right {
   left: 50%;
   transform: translateX(-50%);
-  width: 738px;
-  height: 529px;
+  width: min(738px, 100%);
+  height: auto;
+  aspect-ratio: 738 / 529;
 }
 
 .case-mobile-demo {
