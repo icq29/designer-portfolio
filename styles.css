@@ -1345,7 +1345,7 @@ body {
 .case-guidelines-swatch {
   flex: 1 1 0;
   min-width: 0;
-  height: 362px;
+  min-height: 0;
   border-radius: 12px;
   padding: 42px;
   box-sizing: border-box;
@@ -1427,7 +1427,7 @@ body {
   font-weight: 500;
   font-size: 72px;
   line-height: 1;
-  color: #252525;
+  color: #0e0e0e;
 }
 
 .case-guidelines-weights,
@@ -2711,7 +2711,6 @@ a {
   }
 
   .case-guidelines-swatch {
-    height: 300px;
     padding: 24px;
   }
 
@@ -2869,7 +2868,6 @@ a {
   }
 
   .case-guidelines-swatch {
-    height: 168px;
     border-radius: 16px;
     padding: 20px;
   }
