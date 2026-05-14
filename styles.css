@@ -802,8 +802,7 @@ body {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  height: auto;
-  aspect-ratio: 1920 / 598;
+  height: 598px;
   box-sizing: border-box;
   padding: 0;
   background: #f1f1f1;
@@ -813,9 +812,12 @@ body {
 
 .case-demo-inner {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(1363px, 100%);
+  aspect-ratio: 1363 / 516;
+  height: auto;
   line-height: 0;
 }
 
@@ -824,14 +826,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
 }
 
 .case-hypotheses {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 52px;
 }
 
 .case-hypotheses-title-wrap {
