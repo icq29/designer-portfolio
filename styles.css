@@ -1027,7 +1027,7 @@ body {
 .case-mobile-card {
   position: relative;
   overflow: hidden;
-  height: 564px;
+  height: auto;
   border-radius: 12px;
   background: #f1f1f1;
   box-sizing: border-box;
@@ -2665,7 +2665,7 @@ a {
   }
 
   .case-mobile-card {
-    height: 564px;
+    height: auto;
   }
 
   .case-mobile-card--left {
@@ -2841,7 +2841,7 @@ a {
   }
 
   .case-mobile-card {
-    height: 564px;
+    height: auto;
     padding: 24px 24px 0;
   }
 
