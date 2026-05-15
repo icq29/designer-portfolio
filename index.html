@@ -62,7 +62,6 @@
             </div>
           </header>
           <div class="hero-figure reveal-item" id="hero-figure" aria-hidden="true">
-            <img class="hero-figure-static" src="/index-ui/hero-figure-static.webp" alt="" decoding="async" />
             <div id="hero-svg3d"></div>
           </div>
           <div class="hero-meta">
@@ -274,62 +273,21 @@
     </main>
     <script>
       (function () {
-        var heroFigure = document.getElementById("hero-figure");
         var heroMount = document.getElementById("hero-svg3d");
         if (!heroMount) return;
-        var desktopQuery = window.matchMedia("(min-width: 1025px) and (hover: hover) and (pointer: fine)");
-
-        function isDesktopDevice() {
-          return desktopQuery.matches;
-        }
-
-        if (!isDesktopDevice()) {
-          if (heroFigure) heroFigure.classList.add("is-static-only");
-          return;
-        }
 
         function loadHeroSvg3D() {
           return import("./hero-svg3d.js?v=20260513-4");
         }
 
-        function markAnimationReady() {
-          if (!heroFigure) return;
-          requestAnimationFrame(function () {
-            requestAnimationFrame(function () {
-              heroFigure.classList.add("is-animated-ready");
-            });
-          });
-        }
-
         function loadAnimatedHero() {
-          if (!heroFigure) return;
-          heroFigure.classList.remove("is-static-only");
-          heroFigure.classList.remove("is-animated-ready");
-          loadHeroSvg3D().then(markAnimationReady).catch(function () {
-            if (heroFigure) heroFigure.classList.add("is-static-only");
-          });
+          loadHeroSvg3D().catch(function () {});
         }
 
         loadAnimatedHero();
 
         window.addEventListener("pageshow", function () {
-          if (!isDesktopDevice()) return;
           loadAnimatedHero();
-        });
-
-        desktopQuery.addEventListener("change", function (event) {
-          if (!heroFigure) return;
-          if (!event.matches) {
-            heroFigure.classList.add("is-static-only");
-            heroFigure.classList.remove("is-animated-ready");
-            return;
-          }
-          loadAnimatedHero();
-        });
-
-        window.addEventListener("pagehide", function () {
-          if (!heroFigure) return;
-          heroFigure.classList.remove("is-animated-ready");
         });
 
       })();
