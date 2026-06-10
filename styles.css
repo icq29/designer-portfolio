@@ -3352,12 +3352,19 @@ a {
   }
 }
 
+/* ---------- Hero bottom padding halved (≤ 642px) ---------- */
+@media (max-width: 642px) {
+  .hero {
+    padding-bottom: 11px;
+  }
+}
+
 /* ---------- Index responsive: mobile (≤ 640px) ---------- */
 @media (max-width: 640px) {
   .hero {
     height: auto;
     min-height: 0;
-    padding-bottom: 24px;
+    padding-bottom: 11px;
   }
 
   .hero-figure {
@@ -3506,7 +3513,7 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 52px;
+  margin-bottom: 26px;
 }
 
 .menu-overlay-title {
