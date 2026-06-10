@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=20260610-1300" />
+    <link rel="stylesheet" href="./styles.css?v=20260610-1330" />
   </head>
   <body>
     <main class="page">
@@ -588,6 +588,7 @@
         var closers = overlay.querySelectorAll("[data-menu-close]");
         var links = overlay.querySelectorAll("[data-menu-link]");
         var ctaLinks = overlay.querySelectorAll(".menu-overlay-cta");
+        var savedScrollY = 0;
 
         ctaLinks.forEach(function (link) {
           link.addEventListener("click", function () {
@@ -596,15 +597,21 @@
         });
 
         function openMenu() {
+          if (overlay.classList.contains("is-open")) return;
+          savedScrollY = window.scrollY || window.pageYOffset || 0;
+          document.body.style.top = -savedScrollY + "px";
+          document.body.classList.add("menu-open");
           overlay.classList.add("is-open");
           overlay.setAttribute("aria-hidden", "false");
-          document.body.classList.add("menu-open");
         }
 
         function closeMenu() {
+          if (!overlay.classList.contains("is-open")) return;
           overlay.classList.remove("is-open");
           overlay.setAttribute("aria-hidden", "true");
           document.body.classList.remove("menu-open");
+          document.body.style.top = "";
+          window.scrollTo(0, savedScrollY);
         }
 
         openers.forEach(function (btn) {
@@ -622,8 +629,19 @@
         });
 
         links.forEach(function (link) {
-          link.addEventListener("click", function () {
-            closeMenu();
+          link.addEventListener("click", function (e) {
+            var hash = link.getAttribute("href");
+            var target = hash && hash !== "#" ? document.querySelector(hash) : null;
+
+            if (target) {
+              e.preventDefault();
+              closeMenu();
+              requestAnimationFrame(function () {
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+              });
+            } else {
+              closeMenu();
+            }
           });
         });
 
