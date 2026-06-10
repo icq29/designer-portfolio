@@ -6,6 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   build: {
+    cssTarget: ["safari14", "chrome87", "firefox78", "edge88"],
     rollupOptions: {
       input: {
         index: path.resolve(__dirname, "index.html"),
