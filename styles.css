@@ -2138,6 +2138,11 @@ a {
     transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.work-card-image--placeholder {
+  background: #f8f8f8;
+  filter: none;
+}
+
 .work-card:hover .work-card-image,
 .work-card:focus-within .work-card-image {
   filter: grayscale(0);
