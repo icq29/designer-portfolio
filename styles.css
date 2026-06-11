@@ -162,6 +162,12 @@ body {
   gap: 52px;
 }
 
+@media (max-width: 1320px) {
+  .container.container--case {
+    gap: round(clamp(24px, calc(24px + (100vw - 600px) * 0.0389), 52px), 1px);
+  }
+}
+
 .hero + .banner {
   margin-top: calc(clamp(64px, 6.35vw, 122px) / -2);
 }
@@ -487,6 +493,39 @@ body {
   color: var(--color-grey);
 }
 
+/* Case info: Figma 755:299 (≤ 1320px) — stacked vertical layout */
+@media (max-width: 1320px) {
+  .case-info {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 24px;
+  }
+
+  .case-info-tags,
+  .case-info-block {
+    align-self: flex-start;
+  }
+
+  .case-info-tags {
+    gap: 6px;
+  }
+
+  .case-info-tags .work-tag {
+    height: 38px;
+    padding: 0 16px;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--color-grey);
+  }
+
+  .case-info-rule {
+    display: none;
+  }
+}
+
 .case-rule {
   border: 0;
   margin: 0;
@@ -563,7 +602,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
-  padding: 52px;
+  padding: clamp(24px, 4vw, 52px);
   background: #f1f1f1;
   border-radius: 12px;
 }
@@ -653,6 +692,22 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
+}
+
+/* Case process: stack at ≤ 1320px, full-width left-aligned */
+@media (max-width: 1320px) {
+  .case-process-grid {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .case-process-col {
+    flex: 0 0 auto;
+    width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .case-process-step-title {
@@ -886,15 +941,15 @@ body {
 }
 
 .case-hypothesis-item:first-child {
-  padding-bottom: 32px;
+  padding-bottom: clamp(12px, 2.22vw, 32px);
 }
 
 .case-hypothesis-item:not(:first-child):not(:last-child) {
-  padding: 32px 0;
+  padding: clamp(12px, 2.22vw, 32px) 0;
 }
 
 .case-hypothesis-item:last-child {
-  padding-top: 32px;
+  padding-top: clamp(12px, 2.22vw, 32px);
 }
 
 .case-hypothesis-item h3 {
@@ -953,15 +1008,15 @@ body {
 }
 
 .case-results-item:first-child {
-  padding-bottom: 32px;
+  padding-bottom: clamp(12px, 2.22vw, 32px);
 }
 
 .case-results-item:not(:first-child):not(:last-child) {
-  padding: 32px 0;
+  padding: clamp(12px, 2.22vw, 32px) 0;
 }
 
 .case-results-item:last-child {
-  padding-top: 32px;
+  padding-top: clamp(12px, 2.22vw, 32px);
 }
 
 .case-results-item h3 {
@@ -1314,7 +1369,7 @@ body {
   width: 100%;
   border-radius: 12px;
   background: #f1f1f1;
-  padding: 52px;
+  padding: clamp(24px, 3.61vw, 52px);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1344,11 +1399,51 @@ body {
   margin-top: 0;
 }
 
+@media (max-width: 1440px) {
+  .case-guidelines-palette {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .case-guidelines-palette .case-guidelines-swatch {
+    flex: 0 0 auto;
+    width: auto;
+    align-self: stretch;
+    text-align: left;
+  }
+
+  .case-guidelines-palette .case-guidelines-swatch p {
+    font-size: clamp(13px, 1.25vw, 18px);
+  }
+
+  .case-guidelines-palette .case-guidelines-swatch span {
+    font-size: clamp(13px, 1.04vw, 15px);
+  }
+
+  .case-guidelines-type-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: clamp(12px, 2vw, 32px);
+  }
+
+  .case-guidelines-type-row .case-guidelines-family {
+    font-size: clamp(32px, 5vw, 72px);
+  }
+
+  .case-guidelines-type-row .case-guidelines-weights p,
+  .case-guidelines-type-row .case-guidelines-samples p {
+    font-size: clamp(13px, 1.39vw, 20px);
+  }
+}
+
 .case-guidelines-swatch {
   flex: 1 1 0;
   min-width: 0;
   min-height: 0;
-  border-radius: 12px;
+  border-radius: clamp(6px, 0.83vw, 12px);
   padding: 42px;
   box-sizing: border-box;
   display: flex;
@@ -2766,16 +2861,9 @@ a {
     object-fit: contain;
   }
 
-  .case-guidelines-inner {
-    padding: 42px 32px;
-  }
 
   .case-guidelines-swatch {
     padding: 24px;
-  }
-
-  .case-guidelines-type-row {
-    flex-wrap: wrap;
   }
 
   .work-grid {
@@ -3016,7 +3104,6 @@ a {
   }
 
   .case-guidelines-inner {
-    padding: 32px 24px;
     gap: 32px;
   }
 
@@ -3072,20 +3159,13 @@ a {
 
   .case-guidelines-palette {
     margin-top: 0;
-    flex-direction: column;
   }
 
   .case-guidelines-swatch {
-    border-radius: 16px;
     padding: 20px;
   }
 
   .case-guidelines-type {
-    gap: 24px;
-  }
-
-  .case-guidelines-type-row {
-    flex-direction: column;
     gap: 24px;
   }
 
@@ -3116,24 +3196,10 @@ a {
     letter-spacing: -0.04em;
   }
 
-  .case-info {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
-  }
-
-  .case-info-rule {
-    width: 100%;
-    height: 1px;
-  }
 
   .case-task {
     flex-direction: column;
     gap: 40px;
-  }
-
-  .case-pains {
-    padding: 32px 24px;
   }
 
   .case-process-title {
@@ -3164,13 +3230,23 @@ a {
   }
 
   .hero .header .main-nav,
-  .hero .header .header-actions a.cv-link {
+  .hero .header .header-actions a.cv-link,
+  .case-top .header .main-nav,
+  .case-top .header .header-actions a.cv-link,
+  .header.header--case-scroll .main-nav,
+  .header.header--case-scroll .header-actions a.cv-link {
     display: none;
   }
 
-  .hero .header .header-actions {
+  .hero .header .header-actions,
+  .case-top .header .header-actions,
+  .header.header--case-scroll .header-actions {
     width: auto;
     gap: 0;
+  }
+
+  .case-menu-dock {
+    display: none;
   }
 
   .header-menu-btn {
@@ -3832,21 +3908,24 @@ body.menu-open {
   letter-spacing: -0.48px;
 }
 
-.header--scroll-dock .header-menu-btn--dark {
+.header--scroll-dock .header-menu-btn--dark,
+.header--case-scroll .header-menu-btn--dark {
   background: var(--color-white);
   border-color: var(--color-white);
   color: var(--color-black);
 }
 
 @media (hover: hover) {
-  .header--scroll-dock .header-menu-btn--dark:hover {
+  .header--scroll-dock .header-menu-btn--dark:hover,
+  .header--case-scroll .header-menu-btn--dark:hover {
     background: transparent;
     border-color: var(--color-white);
     color: var(--color-white);
   }
 }
 
-.header--scroll-dock .header-menu-btn--dark:focus-visible {
+.header--scroll-dock .header-menu-btn--dark:focus-visible,
+.header--case-scroll .header-menu-btn--dark:focus-visible {
   background: transparent;
   border-color: var(--color-white);
   color: var(--color-white);
