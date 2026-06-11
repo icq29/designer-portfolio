@@ -3482,6 +3482,8 @@ a {
 .menu-overlay {
   position: fixed;
   inset: 0;
+  height: 100vh;
+  height: 100dvh;
   z-index: 200;
   background: var(--color-white);
   visibility: hidden;
@@ -3506,6 +3508,8 @@ a {
   padding: 24px var(--page-pad, 24px);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .menu-overlay-top {
@@ -3513,7 +3517,7 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 26px;
+  margin-bottom: 13px;
 }
 
 .menu-overlay-title {
