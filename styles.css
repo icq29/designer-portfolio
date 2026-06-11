@@ -3517,7 +3517,7 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 13px;
+  margin-bottom: 0;
 }
 
 .menu-overlay-title {
@@ -3643,6 +3643,8 @@ a {
 .menu-overlay-list {
   display: flex;
   flex-direction: column;
+  margin-top: clamp(4px, 1.2vh, 12px);
+  margin-bottom: 24px;
 }
 
 .menu-overlay-item {
@@ -3753,13 +3755,9 @@ body.menu-open {
     font-size: 56px;
   }
 
-  .menu-overlay-top {
-    margin-bottom: 21px;
-  }
-
   .menu-overlay-item {
     font-size: 17px;
-    padding: 24px 0;
+    padding: 24px 8px;
   }
 
   .menu-overlay-ctas {
