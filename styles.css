@@ -3753,13 +3753,8 @@ body.menu-open {
     font-size: 56px;
   }
 
-  .menu-overlay-top {
-    margin-bottom: 52px;
-  }
-
   .menu-overlay-item {
     font-size: 17px;
-    padding: 24px 0;
   }
 
   .menu-overlay-ctas {
