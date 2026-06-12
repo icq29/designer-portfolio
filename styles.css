@@ -3251,6 +3251,21 @@ a {
   }
 }
 
+/* ---------- Case page: unified title scaling (≤ 1278px) ---------- */
+@media (max-width: 1278px) {
+  .case-title,
+  .case-process-title,
+  .case-hypotheses-title,
+  .case-results-title,
+  .case-mobile-text-title,
+  .case-conclusion-title,
+  .case-design-system-text-title {
+    font-size: clamp(22px, 3.29vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+}
+
 /* ---------- Index responsive: tablet (≤ 1278px) ---------- */
 @media (max-width: 1278px) {
   .page {
