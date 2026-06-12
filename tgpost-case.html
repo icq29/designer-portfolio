@@ -403,7 +403,7 @@
         </section>
 
         <section class="case-design-system-text" aria-label="Создание дизайн-системы">
-          <h2 class="case-design-system-text-title">Создание дизайн-системы</h2>
+          <h2 class="case-design-system-text-title">Создание <span class="case-design-system-text-title-break">дизайн-системы</span></h2>
           <p class="case-design-system-text-subtitle">
             Чтобы ускорить разработку и передачу в код, создал небольшую дизайн систему с основными компонентами
           </p>
@@ -767,6 +767,34 @@
         }, { passive: true });
 
         updateDock();
+      })();
+
+      (function () {
+        var chips = document.querySelectorAll(".case-pain-chip");
+        if (!chips.length) return;
+
+        function updateChips() {
+          chips.forEach(function (chip) {
+            var textNode = chip.querySelector(".case-pain-chip-text");
+            if (!textNode) return;
+            chip.classList.remove("is-multiline");
+            var style = window.getComputedStyle(textNode);
+            var lineHeight = parseFloat(style.lineHeight);
+            if (isNaN(lineHeight)) {
+              lineHeight = parseFloat(style.fontSize) * 1.25;
+            }
+            if (textNode.offsetHeight > lineHeight * 1.4) {
+              chip.classList.add("is-multiline");
+            }
+          });
+        }
+
+        updateChips();
+        window.addEventListener("resize", updateChips);
+
+        if ("fonts" in document) {
+          document.fonts.ready.then(updateChips);
+        }
       })();
 
       (function () {
