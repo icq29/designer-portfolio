@@ -360,9 +360,16 @@
     </div>
     <script>
       (function () {
+        var navEntry = (performance.getEntriesByType && performance.getEntriesByType("navigation")[0]) || null;
+        var navType = navEntry ? navEntry.type : (performance.navigation && performance.navigation.type === 2 ? "back_forward" : "navigate");
+        var isBackForward = navType === "back_forward";
+
         if ("scrollRestoration" in history) {
-          history.scrollRestoration = "manual";
+          history.scrollRestoration = isBackForward ? "auto" : "manual";
         }
+
+        if (isBackForward) return;
+
         if (!window.location.hash) {
           window.scrollTo(0, 0);
           return;
