@@ -713,11 +713,22 @@
         var navType = navEntry ? navEntry.type : (performance.navigation && performance.navigation.type === 2 ? "back_forward" : "navigate");
         var isBackForward = navType === "back_forward";
 
-        if ("scrollRestoration" in history) {
-          history.scrollRestoration = isBackForward ? "auto" : "manual";
+        window.addEventListener("pagehide", function () {
+          if ("scrollRestoration" in history) {
+            history.scrollRestoration = "auto";
+          }
+        });
+
+        if (isBackForward) {
+          if ("scrollRestoration" in history) {
+            history.scrollRestoration = "auto";
+          }
+          return;
         }
 
-        if (isBackForward) return;
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
 
         if (!window.location.hash) {
           window.scrollTo(0, 0);
