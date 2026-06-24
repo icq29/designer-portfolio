@@ -50,10 +50,35 @@
   font-display: swap;
 }
 
+/* Gilroy — drop the font files into /public/fonts/ (woff2). Falls back to Manrope until then. */
 @font-face {
-  font-family: "Proxima Nova";
-  src: local("Proxima Nova Regular"), local("ProximaNova-Regular");
+  font-family: "Gilroy";
+  src: local("Gilroy Regular"), local("Gilroy-Regular"), url("/fonts/Gilroy-Regular.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Medium"), local("Gilroy-Medium"), url("/fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy SemiBold"), local("Gilroy-SemiBold"), url("/fonts/Gilroy-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy Bold"), local("Gilroy-Bold"), url("/fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -70,8 +95,8 @@
   --radius-banner: 24px;
 
   --font-halvar: "Halvar Breitschrift", "Arial Narrow", sans-serif;
-  --font-proxima: "Proxima Nova", "Segoe UI", sans-serif;
   --font-tags: "Manrope", sans-serif;
+  --font-gilroy: "Gilroy", "Manrope", sans-serif;
 }
 
 * {
@@ -80,7 +105,7 @@
 
 body {
   margin: 0;
-  font-family: var(--font-proxima);
+  font-family: var(--font-tags);
   color: var(--color-black);
   background: var(--color-white);
   overflow-x: hidden;
@@ -362,6 +387,29 @@ body {
   overflow: hidden;
 }
 
+/* Litte Mobile cover: full-bleed banner filling the whole .case-cover section */
+.case-cover--litte {
+  padding: 0;
+}
+
+.case-cover--litte .case-cover-frame {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 1920 / 292;
+  max-height: 292px;
+  border-radius: 0;
+}
+
+.case-cover--litte .case-cover-frame img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.case-title.case-title--litte {
+  width: 824px;
+  max-width: 100%;
+}
+
 .case-cover-clip {
   position: absolute;
   inset: 0;
@@ -530,6 +578,21 @@ body {
 @media (max-width: 404px) {
   .case-info-tags .work-tag:last-child {
     display: none;
+  }
+}
+
+/* Litte: once the 4 tags no longer fit on one row, lay them out 2 per row (2×2),
+   keeping all four visible */
+@media (max-width: 456px) {
+  .case-info-tags--litte {
+    flex-wrap: wrap;
+    gap: 6px;
+    /* narrow enough to fit exactly 2 tags per row, so every gap stays 6px */
+    max-width: 240px;
+  }
+
+  .case-info-tags--litte .work-tag:last-child {
+    display: inline-flex;
   }
 }
 
@@ -911,6 +974,26 @@ body {
   pointer-events: none;
 }
 
+/* Litte Mobile demo: gradient background + catalog screen, 1:1 with Figma */
+.case-demo.case-demo--litte {
+  padding: clamp(16px, 4.06vw, 52px);
+  background: linear-gradient(to bottom, #4837ff, #ffffff);
+}
+
+.case-demo--litte .case-demo-inner {
+  width: min(1277px, 100%);
+  aspect-ratio: 1277 / 691;
+  border-radius: clamp(8px, 1.5625vw, 20px);
+}
+
+.case-demo--litte .case-demo-clip {
+  border-radius: inherit;
+}
+
+.case-demo--litte .case-demo-img {
+  object-position: center;
+}
+
 .case-hypotheses {
   width: 100%;
   display: flex;
@@ -1000,6 +1083,23 @@ body {
   letter-spacing: -0.84px;
   text-transform: uppercase;
   color: #0e0e0e;
+}
+
+.case-results-head {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.case-results-intro {
+  margin: 0;
+  max-width: 720px;
+  font-family: var(--font-tags);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  color: var(--color-grey);
 }
 
 .case-results-list {
@@ -1172,6 +1272,39 @@ body {
   height: auto;
 }
 
+/* Litte Mobile: Figma image proportions for mobile blocks */
+/* Both card images sized as a share of the (equal-width) card, exactly as in
+   Figma — so they shrink together proportionally at every width.
+   Top padding as % of card width recreates Figma's vertical offset (cards → 581 @ 834). */
+.case-mobile-cards--litte .case-mobile-card--left,
+.case-mobile-cards--litte .case-mobile-card--right {
+  padding: 0;
+}
+
+/* Top offset as margin on the image — margin % is relative to the card width,
+   so it (and the image %) scale together and reproduce Figma (card → 586 @ 834). */
+.case-mobile-cards--litte .case-mobile-card-media--left {
+  width: 73.62%; /* 614 / 834 */
+  aspect-ratio: 614 / 499;
+  margin-top: 10.43%; /* 87 / 834 */
+}
+
+.case-mobile-cards--litte .case-mobile-card-media--right {
+  width: 44.84%; /* 374 / 834 */
+  aspect-ratio: 374 / 504;
+  margin-top: 9.83%; /* 82 / 834 */
+}
+
+.case-mobile-demo.case-mobile-demo--litte {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.case-mobile-demo--litte .case-mobile-demo-inner {
+  width: min(892px, 100%);
+  aspect-ratio: 892 / 696;
+}
+
 .case-conclusion {
   width: 100%;
   display: flex;
@@ -1240,6 +1373,24 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Litte Mobile: tall product-page screen, full image as in Figma */
+.case-demo-calendar--litte {
+  height: auto;
+  box-sizing: border-box;
+  padding: clamp(16px, 4.06vw, 52px) clamp(16px, 4.06vw, 52px) 0;
+}
+
+.case-demo-calendar--litte .case-demo-calendar-inner {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  margin: 0 auto;
+  width: min(1128px, 100%);
+  height: auto;
+  aspect-ratio: 1128 / 1088;
 }
 
 .case-components-block {
@@ -1337,6 +1488,51 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+/* Litte Mobile components: grey create block + Figma photos (behavior unchanged) */
+/* Figma is a fixed 1680px composition: heights stay fixed (create 509, slot 140,
+   card 357 — create's height comes from its 385px image + 62px padding), widths
+   scale responsively. So drive heights, not aspect-ratios. */
+.case-components-block--litte .case-components-create {
+  background: #f1f1f1;
+  border: none;
+  /* Figma widths: create 822 / column 846 of the 1668px content (1680 − 12 gap) */
+  flex: 0 1 calc((100% - 12px) * 822 / 1668);
+  aspect-ratio: auto;
+}
+
+.case-components-block--litte .case-components-column {
+  flex: 0 1 calc((100% - 12px) * 846 / 1668);
+}
+
+.case-components-block--litte .case-components-card-img {
+  /* Figma: card image 708 × 322 */
+  width: min(708px, 100%);
+  aspect-ratio: 708 / 322;
+}
+
+/* slot & card sit in the column, so % padding is relative to their own width —
+   matches Figma proportions (px-52/py-32 and p-32 on an 846px card) at any size */
+.case-components-block--litte .case-components-slot {
+  flex: 0 0 140px;
+  padding: 3.78% 6.15%;
+}
+
+.case-components-block--litte .case-components-card {
+  flex: 1 1 auto;
+  aspect-ratio: auto;
+  padding: 3.78%;
+}
+
+.case-components-block--litte .case-components-create-img {
+  width: min(279px, 100%);
+  aspect-ratio: 279 / 385;
+}
+
+.case-components-block--litte .case-components-slot-img {
+  width: min(710px, 100%);
+  aspect-ratio: 710 / 80;
 }
 
 .case-design-system-text {
@@ -1546,6 +1742,48 @@ body {
   display: block;
 }
 
+/* Litte: typography specimen uses Gilroy */
+.case-guidelines--litte .case-guidelines-family,
+.case-guidelines--litte .case-guidelines-weights p,
+.case-guidelines--litte .case-guidelines-samples p {
+  font-family: var(--font-gilroy);
+}
+
+/* Each weight label rendered in its own weight */
+.case-guidelines--litte .case-guidelines-weights p:nth-child(1) {
+  font-weight: 400;
+}
+
+.case-guidelines--litte .case-guidelines-weights p:nth-child(2) {
+  font-weight: 500;
+}
+
+.case-guidelines--litte .case-guidelines-weights p:nth-child(3) {
+  font-weight: 600;
+}
+
+.case-guidelines--litte .case-guidelines-weights p:nth-child(4) {
+  font-weight: 700;
+}
+
+/* Litte Mobile guidelines: palette colors exactly as in Figma */
+.case-guidelines--litte .case-guidelines-swatch--turquoise-900 {
+  background: #4a39ff;
+}
+
+.case-guidelines--litte .case-guidelines-swatch--turquoise-50 {
+  background: #eeecff;
+}
+
+.case-guidelines--litte .case-guidelines-swatch--neutral-75 {
+  background: #f4f4f6;
+  border: none;
+}
+
+.case-guidelines--litte .case-guidelines-swatch--neutral-900 {
+  background: #252525;
+}
+
 .case-guidelines-type {
   display: flex;
   flex-direction: column;
@@ -1616,6 +1854,13 @@ body {
   height: auto;
   aspect-ratio: 4096 / 1317;
   object-fit: cover;
+}
+
+/* Litte: show the full design-photo at its natural ratio, never cropped */
+.case-design-photo--litte .case-design-photo-img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 

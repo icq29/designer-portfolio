@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Litte Mobile</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css?v=20260512-5730" />
+  </head>
+  <body>
+    <main class="page page--case">
+      <div class="case-menu-dock" id="case-menu-dock" aria-hidden="true" inert>
+        <div class="case-menu-dock-inner">
+          <header class="header header--case-scroll">
+            <div class="header-brand">
+              <button class="header-menu-btn header-menu-btn--dark" type="button" aria-label="Menu" data-menu-open>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <rect y="2" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                  <rect y="6.3" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                  <rect y="10.6" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                </svg>
+              </button>
+              <a class="logo" href="/home" aria-label="На главную">Si.</a>
+            </div>
+            <nav class="main-nav">
+              <a class="flip-link" href="/home" aria-label="Home">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">HOME</span>
+                  <span class="flip-link__face flip-link__face--back">HOME</span>
+                </span>
+              </a>
+              <a class="flip-link" href="/home#about" aria-label="About">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">ABOUT</span>
+                  <span class="flip-link__face flip-link__face--back">ABOUT</span>
+                </span>
+              </a>
+              <a class="flip-link" href="/home#work" aria-label="Work">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">WORK</span>
+                  <span class="flip-link__face flip-link__face--back">WORK</span>
+                </span>
+              </a>
+              <a class="flip-link" href="/home#contact" aria-label="Contact">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">CONTACT</span>
+                  <span class="flip-link__face flip-link__face--back">CONTACT</span>
+                </span>
+              </a>
+            </nav>
+            <div class="header-actions">
+              <a class="cv-link flip-link" href="/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="CV">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">CV</span>
+                  <span class="flip-link__face flip-link__face--back">CV</span>
+                </span>
+              </a>
+              <a
+                class="telegram-btn telegram-btn--component telegram-btn--light telegram-btn--size-sm"
+                href="https://t.me/icqq29"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="telegram-icon-wrap" aria-hidden="true">
+                  <img class="telegram-icon telegram-icon--default" src="/case-dock/telegram-light-btn-default.svg" alt="" width="14" height="14" />
+                  <img class="telegram-icon telegram-icon--hover" src="/case-dock/telegram-light-btn-hover.svg" alt="" width="14" height="14" />
+                </span>
+                <span>Telegram</span>
+              </a>
+            </div>
+          </header>
+        </div>
+      </div>
+      <div class="container container--case">
+        <div class="case-top">
+          <header class="header">
+            <div class="header-brand">
+              <button class="header-menu-btn" type="button" aria-label="Menu" data-menu-open>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <rect y="2" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                  <rect y="6.3" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                  <rect y="10.6" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                </svg>
+              </button>
+              <a class="logo" href="/home" aria-label="На главную">Si.</a>
+            </div>
+            <nav class="main-nav">
+              <a class="flip-link" href="/home#about" aria-label="About">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">ABOUT</span>
+                  <span class="flip-link__face flip-link__face--back">ABOUT</span>
+                </span>
+              </a>
+              <a class="flip-link" href="/home#work" aria-label="Work">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">WORK</span>
+                  <span class="flip-link__face flip-link__face--back">WORK</span>
+                </span>
+              </a>
+              <a class="flip-link" href="/home#contact" aria-label="Contact">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">CONTACT</span>
+                  <span class="flip-link__face flip-link__face--back">CONTACT</span>
+                </span>
+              </a>
+            </nav>
+            <div class="header-actions">
+              <a class="cv-link flip-link" href="/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="CV">
+                <span class="flip-link__inner">
+                  <span class="flip-link__face flip-link__face--front">CV</span>
+                  <span class="flip-link__face flip-link__face--back">CV</span>
+                </span>
+              </a>
+              <a
+                class="telegram-btn telegram-btn--component telegram-btn--size-sm"
+                href="https://t.me/icqq29"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="telegram-icon-wrap" aria-hidden="true">
+                  <img class="telegram-icon telegram-icon--default" src="/case-dock/telegram-dark-btn-default.svg" alt="" width="14" height="14" />
+                  <img class="telegram-icon telegram-icon--hover" src="/case-dock/telegram-dark-btn-hover.svg" alt="" width="14" height="14" />
+                </span>
+                <span>Telegram</span>
+              </a>
+            </div>
+          </header>
+          <section class="case-cover case-cover--litte" aria-label="Превью проекта">
+            <div class="case-cover-frame">
+              <div class="case-cover-clip">
+                <img
+                  src="/case-cover/litte-cover-main.webp"
+                  alt=""
+                  width="1117"
+                  height="250"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </section>
+        </div>
+        <nav class="case-breadcrumbs" aria-label="Хлебные крошки">
+          <a class="case-breadcrumbs-link" href="/home">Home</a>
+          <span class="case-breadcrumbs-sep" aria-hidden="true">
+            <img src="/case-icons/breadcrumb-sep.svg" alt="" width="12" height="12" decoding="async" />
+          </span>
+          <span class="case-breadcrumbs-current">LITTE MOBILE</span>
+        </nav>
+
+        <h1 class="case-title case-title--litte">Litte mobile — платформа для продажи техники с фокусом на рост среднего чека</h1>
+
+        <section class="case-info" aria-label="Категории и метаданные проекта">
+          <div class="case-info-tags case-info-tags--litte">
+            <span class="work-tag">#E-commerce</span>
+            <span class="work-tag">#Web</span>
+            <span class="work-tag">#Mobile</span>
+            <span class="work-tag">#B2C</span>
+          </div>
+          <span class="case-info-rule" aria-hidden="true"></span>
+          <div class="case-info-block">
+            <p class="case-info-label">Моя роль</p>
+            <p class="case-info-text">Product UX / UI Designer</p>
+          </div>
+          <span class="case-info-rule" aria-hidden="true"></span>
+          <div class="case-info-block">
+            <p class="case-info-label">Длительность проекта</p>
+            <p class="case-info-text">2 месяца</p>
+          </div>
+        </section>
+
+        <hr class="case-rule" />
+
+        <section class="case-task" aria-label="Задача и цель">
+          <div class="case-task-col">
+            <p class="case-task-heading">Бизнес-задача</p>
+            <p class="case-task-body">
+              Спроектировать полноценный интернет-магазин цифровой и бытовой техники с широким каталогом. Магазин должен закрывать весь путь покупателя — от поиска товара в каталоге до оформления заказа, оплаты и управления покупками в личном кабинете.
+            </p>
+          </div>
+          <div class="case-task-col">
+            <p class="case-task-heading">Бизнес-цель</p>
+            <p class="case-task-body">
+              Максимально увеличивать средний чек покупателя, сохраняя при этом простоту и скорость навигации. Покупатель должен легко находить нужный товар, а система — ненавязчиво подсказывать сопутствующие товары, выгодные комплекты и удобные способы оплаты, чтобы покупка ощущалась простой и выгодной.
+            </p>
+          </div>
+        </section>
+
+        <section class="case-pains" aria-labelledby="case-pains-heading">
+          <h2 class="case-pains-title" id="case-pains-heading">Проблемы и боли</h2>
+          <div class="case-pains-list">
+            <div class="case-pain-chip">
+              <span class="case-pain-chip-icon" aria-hidden="true">
+                <img src="/case-icons/pain-star.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+              </span>
+              <p class="case-pain-chip-text">Покупателю сложно ориентироваться в большом каталоге — много категорий, теряется путь к нужному товару</p>
+            </div>
+            <div class="case-pain-chip">
+              <span class="case-pain-chip-icon" aria-hidden="true">
+                <img src="/case-icons/pain-star.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+              </span>
+              <p class="case-pain-chip-text">Нет понятного сравнения товаров, чтобы быстро выбрать между похожими моделями</p>
+            </div>
+            <div class="case-pain-chip">
+              <span class="case-pain-chip-icon" aria-hidden="true">
+                <img src="/case-icons/pain-star.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+              </span>
+              <p class="case-pain-chip-text">Покупатель уходит, не докупив сопутствующие товары — средний чек ниже потенциального</p>
+            </div>
+            <div class="case-pain-chip">
+              <span class="case-pain-chip-icon" aria-hidden="true">
+                <img src="/case-icons/pain-star.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+              </span>
+              <p class="case-pain-chip-text">Высокая цена техники отпугивает — нет наглядных инструментов рассрочки и оплаты частями</p>
+            </div>
+            <div class="case-pain-chip">
+              <span class="case-pain-chip-icon" aria-hidden="true">
+                <img src="/case-icons/pain-star.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+              </span>
+              <p class="case-pain-chip-text">Долгий и громоздкий вход и оформление заказа снижают конверсию</p>
+            </div>
+            <div class="case-pain-chip">
+              <span class="case-pain-chip-icon" aria-hidden="true">
+                <img src="/case-icons/pain-star.svg" alt="" width="18" height="18" loading="lazy" decoding="async" />
+              </span>
+              <p class="case-pain-chip-text">Покупателю некуда вернуться за историей заказов, бонусами, адресами и картами — нет единого личного пространства</p>
+            </div>
+          </div>
+        </section>
+
+        <h2 class="case-process-title">Процесс работы с Продуктом</h2>
+
+        <section class="case-process" aria-label="Этапы работы с продуктом">
+          <div class="case-process-grid">
+            <div class="case-process-col">
+              <p class="case-process-step-title">Конкурентный и референсный анализ</p>
+              <p class="case-process-step-body">
+                Изучил ведущие e-commerce платформы по продаже техники и сопоставил их сценарии: структуру каталога и фильтров, устройство карточки товара, механики допродаж (сопутствующие товары, комплекты), реализацию рассрочки, trade-in и личного кабинета.
+              </p>
+            </div>
+            <div class="case-process-col">
+              <p class="case-process-step-title">Анализ бизнес-ограничений и приоритетов</p>
+              <p class="case-process-step-body">
+                Составил карту ключевых сценариев, напрямую влияющих на средний чек и конверсию (карточка товара, корзина, чекаут), и отделил их от вторичных страниц (новости, статьи, SEO-разделы), чтобы в первую очередь выделить то, что приносит деньги.
+              </p>
+            </div>
+            <div class="case-process-col">
+              <p class="case-process-step-title">Анализ пользовательских сценариев</p>
+              <p class="case-process-step-body">
+                Проработал пути двух типов покупателей: тех, кто точно знает, что ищет (быстрый путь через поиск и фильтры), и тех, кто выбирает (путь через категории, подкатегории, сравнение и отзывы)
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-hypotheses" aria-label="Гипотезы и решения">
+          <div class="case-hypotheses-title-wrap">
+            <h2 class="case-hypotheses-title">Гипотезы и решения</h2>
+          </div>
+          <div class="case-hypotheses-list">
+            <article class="case-hypothesis-item">
+              <h3>
+                Если в карточке товара показывать сопутствующие товары и выгодные комплекты, то средний чек вырастет
+              </h3>
+              <p>
+                Спроектировал в карточке товара блок сопутствующих товаров и акционные комплекты: набор из 2 товаров стоит заметно дешевле, чем по отдельности. В корзине добавил блок рекомендованных товаров, чтобы покупатель мог дополнить заказ перед оплатой.
+              </p>
+            </article>
+            <article class="case-hypothesis-item">
+              <h3>Если показать наглядную рассрочку и оплату частями прямо в карточке, то дорогая техника перестанет отпугивать</h3>
+              <p>Внедрил блок рассрочки: стоимость, разбивка по периодам видны сразу в карточке товара, без перехода на отдельную страницу.</p>
+            </article>
+            <article class="case-hypothesis-item">
+              <h3>Если сделать умные фильтры и понятные подкатегории, то покупатель быстрее доберётся до нужного товара</h3>
+              <p>
+                Спроектировал умные фильтры и развёрнутую структуру подкатегорий, упрощающая навигацию в большом каталоге. Добавил страницу сравнения товаров с характеристиками и значениями, чтобы выбор между похожими моделями был наглядным.
+              </p>
+            </article>
+            <article class="case-hypothesis-item">
+              <h3>Если сделать оформление заказа прозрачным, то покупатель дойдёт до оплаты</h3>
+              <p>
+                Спроектировал чекаут, где на одном экране видны товары, выгоды, промокоды, накопленные бонусы, выбор способа получения, адреса, доставки и способа оплаты.
+              </p>
+            </article>
+            <article class="case-hypothesis-item">
+              <h3>Если собрать всё в едином личном кабинете и упростить вход, то покупатель будет возвращаться</h3>
+              <p>
+                Сделал быструю авторизацию по номеру телефона и единый личный кабинет: личная информация, накопленные бонусы, заказы, корзина, избранное, сравнения, отзывы, адреса доставки — всё в одном месте.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-demo case-demo--litte" aria-label="Интерфейс каталога">
+          <div class="case-demo-inner">
+            <div class="case-demo-clip">
+              <img
+                class="case-demo-img"
+                src="/case-demo/litte-demo-catalog.webp"
+                alt="Интерфейс каталога в продукте"
+                width="1277"
+                height="691"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="case-components-block case-components-block--litte" aria-label="UI components">
+          <div class="case-components-layout">
+            <article class="case-components-create">
+              <img
+                class="case-components-create-img"
+                src="/case-extra/litte-components-create.webp"
+                alt="Компонент create"
+                width="279"
+                height="385"
+                loading="lazy"
+                decoding="async"
+              />
+            </article>
+            <div class="case-components-column">
+              <article class="case-components-slot">
+                <img
+                  class="case-components-slot-img"
+                  src="/case-extra/litte-components-slot.webp"
+                  alt="Компонент slot"
+                  width="710"
+                  height="80"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </article>
+              <article class="case-components-card">
+                <img
+                  class="case-components-card-img"
+                  src="/case-extra/litte-components-card.webp"
+                  alt="Компонент card"
+                  width="710"
+                  height="323"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-design-system-text" aria-label="Создание дизайн-системы">
+          <h2 class="case-design-system-text-title">Создание <span class="case-design-system-text-title-break">дизайн-системы</span></h2>
+          <p class="case-design-system-text-subtitle">
+            Чтобы ускорить разработку и передачу в код, создал небольшую дизайн систему с основными компонентами
+          </p>
+        </section>
+
+        <section class="case-guidelines case-guidelines--litte" aria-label="Цветовая палитра и типографика">
+          <div class="case-guidelines-inner">
+            <div class="case-guidelines-color">
+              <p class="case-guidelines-heading">Color Palette</p>
+              <div class="case-guidelines-palette">
+                <article class="case-guidelines-swatch case-guidelines-swatch--turquoise-900">
+                  <p>Primary / 900</p>
+                  <span>#2ABCC0</span>
+                </article>
+                <article class="case-guidelines-swatch case-guidelines-swatch--turquoise-50">
+                  <p>Secondary / 50</p>
+                  <span>#F0FCFB</span>
+                </article>
+                <article class="case-guidelines-swatch case-guidelines-swatch--neutral-50">
+                  <p>Neutral / 50</p>
+                  <span>#FFFFF</span>
+                </article>
+                <article class="case-guidelines-swatch case-guidelines-swatch--neutral-75">
+                  <p>Neutral / 75</p>
+                  <span>#F4F4F4</span>
+                </article>
+                <article class="case-guidelines-swatch case-guidelines-swatch--neutral-900">
+                  <p>Neutral / 900</p>
+                  <span>#111111</span>
+                </article>
+              </div>
+            </div>
+
+            <span class="case-guidelines-divider" aria-hidden="true"></span>
+
+            <div class="case-guidelines-type">
+              <p class="case-guidelines-heading">Typography</p>
+              <div class="case-guidelines-type-row">
+                <p class="case-guidelines-family">Gilroy</p>
+                <div class="case-guidelines-weights">
+                  <p>Regular</p>
+                  <p>Medium</p>
+                  <p>Semibold</p>
+                  <p>Bold</p>
+                </div>
+                <div class="case-guidelines-samples">
+                  <p class="case-guidelines-samples--upper">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+                  <p class="case-guidelines-samples--lower">abcdefghijklmnopqrstuvwxyz</p>
+                  <p class="case-guidelines-samples--numbers">
+                    1234567890.;?!&rdquo;&rsquo;&gt;$&amp;#*$<span class="case-guidelines-samples--strike">₾</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-design-photo case-design-photo--litte" aria-label="Пример экрана дизайн-системы">
+          <img
+            class="case-design-photo-img"
+            src="/case-extra/litte-design-photo.webp"
+            alt="Экран с элементами интерфейса из дизайн-системы"
+            width="1680"
+            height="685"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
+        </section>
+
+        <section class="case-demo-calendar case-demo-calendar--litte" aria-label="Страница товара">
+          <div class="case-demo-calendar-inner">
+            <img
+              class="case-demo-calendar-img"
+              src="/case-demo/litte-product-page.webp"
+              alt="Страница товара в продукте"
+              width="1128"
+              height="1088"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+
+        <section class="case-results" aria-label="Результаты проверки">
+          <div class="case-results-head">
+            <h2 class="case-results-title">Результаты проверки</h2>
+            <p class="case-results-intro">
+              Поскольку магазин проектировался с нуля и эталонной версии «до» не существовало, я проверял решения на качественном уровне — через юзабилити-тесты прототипа и фидбэк пользователей, а не через сравнение метрик
+            </p>
+          </div>
+          <div class="case-results-list">
+            <article class="case-results-item">
+              <h3>Сопутствующие товары и комплекты</h3>
+              <p>В тестах пользователи сами замечали блок комплектов и сопутствующих товаров и говорили, что «так выгоднее брать сразу». Часть участников добавляла к основному товару дополнительные позиции — то есть механика допродажи считывалась и работала без подсказок с моей стороны.</p>
+            </article>
+            <article class="case-results-item">
+              <h3>Рассрочка и оплата частями в карточке</h3>
+              <p>Наглядная разбивка по платежам снимала барьер дорогой цены: участники реагировали на месячный платёж спокойнее, чем на полную стоимость, и отмечали, что «сразу видно, сколько платить и за какой срок». Вопросов «а есть ли рассрочка?» не возникало — ответ был прямо в карточке.</p>
+            </article>
+            <article class="case-results-item">
+              <h3>Умные фильтры и подкатегории</h3>
+              <p>В задачах «найди конкретный товар» участники доходили до нужной карточки без подсказок и не терялись в каталоге. Фильтры и подкатегории называли понятными, навигация не вызывала затруднений даже в большом ассортименте.</p>
+            </article>
+            <article class="case-results-item">
+              <h3>Сравнение товаров</h3>
+              <p>Табличное сравнение характеристик пользователи использовали интуитивно: быстро находили различия между моделями и принимали решение прямо на этой странице, не возвращаясь в каталог.</p>
+            </article>
+            <article class="case-results-item">
+              <h3>Единый личный кабинет и вход по телефону</h3>
+              <p>Авторизацию по номеру телефона участники проходили за секунды и без раздражения. Единый кабинет с заказами, бонусами, избранным и адресами оценивали как удобный — «всё в одном месте, не надо ничего искать».</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="case-mobile-cards case-mobile-cards--litte" aria-label="Экраны мобильной версии">
+          <article class="case-mobile-card case-mobile-card--left">
+            <div class="case-mobile-card-media case-mobile-card-media--left">
+              <img
+                src="/case-mobile/litte-mobile-left.webp"
+                alt="Мобильный экран каталога"
+                width="614"
+                height="499"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </article>
+          <article class="case-mobile-card case-mobile-card--right">
+            <div class="case-mobile-card-media case-mobile-card-media--right">
+              <img
+                src="/case-mobile/litte-mobile-right.webp"
+                alt="Мобильный экран карточки товара"
+                width="384"
+                height="518"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </article>
+        </section>
+
+        <section class="case-mobile-text" aria-label="Описание мобильной версии">
+          <h2 class="case-mobile-text-title">Адаптивный дизайн. Полный функционал в вашем телефоне</h2>
+          <p class="case-mobile-text-body">
+            Мобильная версия сохраняет все ключевые сценарии — каталог с умными фильтрами и подкатегориями, карточку товара с сопутствующими товарами и рассрочкой, сравнение, избранное, корзину, прозрачный чекаут и личный кабинет. Большие, удобные для касания области и быстрая авторизация по номеру телефона позволяют оформлять заказы с телефона так же легко, как и с компьютера.
+          </p>
+        </section>
+
+        <section class="case-mobile-demo case-mobile-demo--litte" aria-label="Сценарии мобильного интерфейса">
+          <div class="case-mobile-demo-inner">
+            <img
+              src="/case-mobile/litte-mobile-demo.webp"
+              alt="Мобильные экраны магазина"
+              width="892"
+              height="696"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </section>
+
+        <section class="case-conclusion" aria-label="Выводы по проекту">
+          <h2 class="case-conclusion-title">Выводы</h2>
+          <div class="case-conclusion-card">
+            <img
+              class="case-conclusion-icon"
+              src="/case-mobile/litte-conclusion-icon.webp"
+              alt=""
+              width="32"
+              height="32"
+              loading="lazy"
+              decoding="async"
+            />
+            <p class="case-conclusion-body">
+              Проектируя магазин с огромным каталогом, я понял, что главная битва идёт не за красоту экранов, а за то, чтобы покупатель не потерялся и не передумал. Каждый лишний шаг, каждая непонятная подкатегория — это ушедший человек и недополученный заказ. Поэтому я научился резать всё, что мешает короткому пути «нашёл — положил в корзину — оплатил». Средний чек растёт не тогда, когда ты громко навязываешь докупку, а когда подсказка появляется ровно в нужный момент: сопутствующий товар в карточке, комплект со скидкой, наглядная рассрочка вместо пугающей полной цены. Хорошая допродажа ощущается как забота, а не как впаривание.
+            </p>
+          </div>
+        </section>
+
+        <section class="footer" id="contact" data-reveal-group>
+          <div class="footer-content">
+            <div class="footer-left reveal-item">
+              <h2>Contact</h2>
+              <div class="footer-copy">
+                <p>Copyright © 2026. Made with</p>
+                <img src="/index-ui/footer-icon.svg" alt="" width="18" height="18" loading="lazy" fetchpriority="low" decoding="async" />
+              </div>
+            </div>
+
+            <div class="footer-right">
+              <div class="footer-cta reveal-item">
+                <p>Давайте начнём творить вместе!</p>
+                <a
+                  class="telegram-btn telegram-btn--component telegram-btn--light telegram-btn--size-lg"
+                  href="https://t.me/icqq29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="telegram-icon-wrap" aria-hidden="true">
+                    <img class="telegram-icon telegram-icon--default" src="/case-dock/telegram-light-btn-default.svg" alt="" width="16" height="16" />
+                    <img class="telegram-icon telegram-icon--hover" src="/case-dock/telegram-light-btn-hover.svg" alt="" width="16" height="16" />
+                  </span>
+                  <span>Telegram</span>
+                </a>
+              </div>
+              <nav class="footer-links">
+                <a class="flip-link" href="mailto:ignatenko.stas@mail.ru">
+                  <span class="flip-link__inner">
+                    <span class="flip-link__face flip-link__face--front">ignatenko.stas@mail.ru</span>
+                    <span class="flip-link__face flip-link__face--back">ignatenko.stas@mail.ru</span>
+                  </span>
+                </a>
+                <a class="flip-link" href="https://www.linkedin.com/in/icqq29/" target="_blank" rel="noopener noreferrer">
+                  <span class="flip-link__inner">
+                    <span class="flip-link__face flip-link__face--front">Linkedin</span>
+                    <span class="flip-link__face flip-link__face--back">Linkedin</span>
+                  </span>
+                </a>
+                <a class="flip-link" href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+                  <span class="flip-link__inner">
+                    <span class="flip-link__face flip-link__face--front">CV</span>
+                    <span class="flip-link__face flip-link__face--back">CV</span>
+                  </span>
+                </a>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="scroll-dock" id="scroll-dock" aria-hidden="true">
+        <div class="scroll-dock-inner">
+          <header class="header header--scroll-dock">
+            <div class="header-brand">
+              <button class="header-menu-btn header-menu-btn--dark" type="button" aria-label="Menu" data-menu-open>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                  <rect y="2" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                  <rect y="6.3" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                  <rect y="10.6" width="14" height="1.4" rx="0.7" fill="currentColor" />
+                </svg>
+              </button>
+              <a class="logo" href="/home" aria-label="Reload page">Si.</a>
+            </div>
+            <div class="header-actions">
+              <a
+                class="telegram-btn telegram-btn--component telegram-btn--light telegram-btn--size-sm"
+                href="https://t.me/icqq29"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="telegram-icon-wrap" aria-hidden="true">
+                  <img class="telegram-icon telegram-icon--default" src="/case-dock/telegram-light-btn-default.svg" alt="" width="14" height="14" />
+                  <img class="telegram-icon telegram-icon--hover" src="/case-dock/telegram-light-btn-hover.svg" alt="" width="14" height="14" />
+                </span>
+                <span>Telegram</span>
+              </a>
+            </div>
+          </header>
+        </div>
+      </div>
+    </main>
+    <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+      <div class="menu-overlay-inner">
+        <div class="menu-overlay-top">
+          <p class="menu-overlay-title">MENU</p>
+          <button class="menu-overlay-close" type="button" aria-label="Close menu" data-menu-close>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 5L19 19M19 5L5 19" stroke="currentColor" stroke-width="1" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+        <nav class="menu-overlay-list">
+          <a class="menu-overlay-item" href="/home" data-menu-link>
+            <span>HOME</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="menu-overlay-item" href="/home#about" data-menu-link>
+            <span>ABOUT</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="menu-overlay-item" href="/home#work" data-menu-link>
+            <span>WORK</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a class="menu-overlay-item" href="/home#contact" data-menu-link>
+            <span>CONTACT</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </nav>
+        <div class="menu-overlay-ctas">
+          <a class="menu-overlay-cta" href="https://t.me/icqq29" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a class="menu-overlay-cta" href="/cv.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a class="menu-overlay-cta" href="https://www.linkedin.com/in/icqq29/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+          <a class="menu-overlay-cta" href="mailto:ignatenko.stas@mail.ru">Mail</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var navEntry = (performance.getEntriesByType && performance.getEntriesByType("navigation")[0]) || null;
+        var navType = navEntry ? navEntry.type : (performance.navigation && performance.navigation.type === 2 ? "back_forward" : "navigate");
+        var isBackForward = navType === "back_forward";
+
+        window.addEventListener("pagehide", function () {
+          if ("scrollRestoration" in history) {
+            history.scrollRestoration = "auto";
+          }
+        });
+
+        if (isBackForward) {
+          if ("scrollRestoration" in history) {
+            history.scrollRestoration = "auto";
+          }
+          return;
+        }
+
+        if ("scrollRestoration" in history) {
+          history.scrollRestoration = "manual";
+        }
+
+        if (!window.location.hash) {
+          window.scrollTo(0, 0);
+        }
+      })();
+
+      (function () {
+        var dock = document.getElementById("case-menu-dock");
+        if (!dock) return;
+
+        var threshold = 200;
+        var ticking = false;
+
+        function update() {
+          var y = window.scrollY || window.pageYOffset || 0;
+          if (y > threshold) {
+            dock.classList.add("is-visible");
+            dock.removeAttribute("inert");
+            dock.setAttribute("aria-hidden", "false");
+          } else {
+            dock.classList.remove("is-visible");
+            dock.setAttribute("inert", "");
+            dock.setAttribute("aria-hidden", "true");
+          }
+          ticking = false;
+        }
+
+        window.addEventListener("scroll", function () {
+          if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+          }
+        }, { passive: true });
+        window.addEventListener("resize", update);
+
+        update();
+      })();
+
+      (function () {
+        var dock = document.getElementById("scroll-dock");
+        if (!dock) return;
+
+        var threshold = 200;
+        var ticking = false;
+
+        function updateDock() {
+          var y = window.scrollY || window.pageYOffset || 0;
+          if (y > threshold) {
+            dock.classList.add("is-visible");
+            dock.setAttribute("aria-hidden", "false");
+          } else {
+            dock.classList.remove("is-visible");
+            dock.setAttribute("aria-hidden", "true");
+          }
+          ticking = false;
+        }
+
+        window.addEventListener("scroll", function () {
+          if (!ticking) {
+            window.requestAnimationFrame(updateDock);
+            ticking = true;
+          }
+        }, { passive: true });
+
+        updateDock();
+      })();
+
+      (function () {
+        var chips = document.querySelectorAll(".case-pain-chip");
+        if (!chips.length) return;
+
+        function updateChips() {
+          chips.forEach(function (chip) {
+            var textNode = chip.querySelector(".case-pain-chip-text");
+            if (!textNode) return;
+            chip.classList.remove("is-multiline");
+            var style = window.getComputedStyle(textNode);
+            var lineHeight = parseFloat(style.lineHeight);
+            if (isNaN(lineHeight)) {
+              lineHeight = parseFloat(style.fontSize) * 1.25;
+            }
+            if (textNode.offsetHeight > lineHeight * 1.4) {
+              chip.classList.add("is-multiline");
+            }
+          });
+        }
+
+        updateChips();
+        window.addEventListener("resize", updateChips);
+
+        if ("fonts" in document) {
+          document.fonts.ready.then(updateChips);
+        }
+      })();
+
+      (function () {
+        var caseContainer = document.querySelector(".page.page--case .container.container--case");
+        if (!caseContainer) return;
+
+        var revealItems = Array.prototype.slice.call(caseContainer.children);
+        var groupRevealItems = Array.prototype.slice.call(caseContainer.querySelectorAll("[data-reveal-group] .reveal-item"));
+        if (!revealItems.length) return;
+
+        revealItems.forEach(function (item, index) {
+          if (item.classList.contains("case-top")) {
+            item.classList.add("is-visible");
+            return;
+          }
+
+          item.classList.add("reveal-item");
+          item.style.setProperty("--reveal-delay", (index % 3) * 120 + "ms");
+          if (item.getBoundingClientRect().top < window.innerHeight * 0.95) {
+            item.classList.add("is-visible");
+          }
+        });
+
+        var groups = Array.prototype.slice.call(caseContainer.querySelectorAll("[data-reveal-group]"));
+        groups.forEach(function (group) {
+          var groupItems = Array.prototype.slice.call(group.querySelectorAll(".reveal-item"));
+          groupItems.forEach(function (item, index) {
+            item.style.setProperty("--reveal-delay", index * 120 + "ms");
+            if (item.getBoundingClientRect().top < window.innerHeight * 0.95) {
+              item.classList.add("is-visible");
+            }
+          });
+        });
+
+        var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+          revealItems.forEach(function (item) {
+            item.classList.add("is-visible");
+          });
+          groupRevealItems.forEach(function (item) {
+            item.classList.add("is-visible");
+          });
+          return;
+        }
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.2, rootMargin: "0px 0px -8% 0px" }
+        );
+
+        revealItems.forEach(function (item) {
+          if (!item.classList.contains("reveal-item")) return;
+          if (item.classList.contains("is-visible")) return;
+          observer.observe(item);
+        });
+
+        groupRevealItems.forEach(function (item) {
+          if (item.classList.contains("is-visible")) return;
+          observer.observe(item);
+        });
+      })();
+
+      (function () {
+        var overlay = document.getElementById("menu-overlay");
+        if (!overlay) return;
+
+        var openers = document.querySelectorAll("[data-menu-open]");
+        var closers = overlay.querySelectorAll("[data-menu-close]");
+        var links = overlay.querySelectorAll("[data-menu-link]");
+        var ctaLinks = overlay.querySelectorAll(".menu-overlay-cta");
+        var savedScrollY = 0;
+
+        ctaLinks.forEach(function (link) {
+          link.addEventListener("click", function () {
+            link.blur();
+          });
+        });
+
+        function openMenu() {
+          if (overlay.classList.contains("is-open")) return;
+          savedScrollY = window.scrollY || window.pageYOffset || 0;
+          document.body.style.top = -savedScrollY + "px";
+          document.body.classList.add("menu-open");
+          overlay.classList.add("is-open");
+          overlay.setAttribute("aria-hidden", "false");
+        }
+
+        function closeMenu() {
+          if (!overlay.classList.contains("is-open")) return;
+          overlay.classList.remove("is-open");
+          overlay.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("menu-open");
+          document.body.style.top = "";
+          window.scrollTo(0, savedScrollY);
+        }
+
+        openers.forEach(function (btn) {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            openMenu();
+          });
+        });
+
+        closers.forEach(function (btn) {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            closeMenu();
+          });
+        });
+
+        links.forEach(function (link) {
+          link.addEventListener("click", function () {
+            closeMenu();
+          });
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && overlay.classList.contains("is-open")) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         index: path.resolve(__dirname, "index.html"),
         tgpostCase: path.resolve(__dirname, "tgpost-case.html"),
+        litteCase: path.resolve(__dirname, "litte-case.html"),
       },
     },
   },

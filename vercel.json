@@ -23,6 +23,11 @@
       "source": "/tgpost-case.html",
       "destination": "/tgpost-case",
       "permanent": false
+    },
+    {
+      "source": "/litte-case.html",
+      "destination": "/litte-case",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -33,6 +38,10 @@
     {
       "source": "/tgpost-case",
       "destination": "/tgpost-case.html"
+    },
+    {
+      "source": "/litte-case",
+      "destination": "/litte-case.html"
     }
   ],
   "git": {
