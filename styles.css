@@ -569,18 +569,6 @@ gap 42px */
   width: 100%;
 }
 
-/* Figma tag: 42px tall,
-
-18px side padding,
-
-Manrope Regular.
-   Double class beats the narrow-viewport .work-tag overrides. */
-.case-info.case-info--suvvy .work-tag {
-  height: 42px;
-  padding: 0 18px;
-  font-weight: 400;
-}
-
 .case-info-tags {
   display: flex;
   flex-wrap: wrap;
@@ -652,13 +640,6 @@ Manrope Regular.
   }
 
   .case-info-rule {
-    display: none;
-  }
-}
-
-/* Hide last case-info tag at very narrow widths to keep them on one row */
-@media (max-width: 404px) {
-  .case-info-tags .work-tag:last-child {
     display: none;
   }
 }
@@ -3174,7 +3155,7 @@ a {
   align-items: center;
   justify-content: center;
   height: 42px;
-  padding: 0 12px;
+  padding: 0 18px;
   border-radius: var(--radius-pill);
   border: 1px solid var(--color-gray-100);
   color: var(--color-grey);
@@ -3213,7 +3194,7 @@ a {
   color: var(--color-grey);
   font-family: var(--font-tags);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.04em;
   line-height: 1.5;
 }
@@ -3441,13 +3422,14 @@ a {
   margin: 0;
   font-family: var(--font-halvar);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1;
   color: var(--color-grey);
 }
 
 .exp-date {
   margin: 0;
+  color: var(--color-grey);
   font-family: var(--font-halvar);
   text-align: right;
   font-size: 15px;
@@ -3797,8 +3779,8 @@ a {
 /* ---------- Work cards: Figma tablet layout (≤ 1680px) ---------- */
 @media (max-width: 1680px) {
   .work-tag {
-    height: 36px;
-    padding: 0 12px;
+    height: 38px;
+    padding: 0 16px;
     font-size: 15px;
     font-weight: 300;
   }
@@ -3930,7 +3912,7 @@ a {
   }
 
   .exp-tags span {
-    height: 36px;
+    height: 38px;
     padding: 0 16px;
     border: 1px solid var(--color-gray-100);
     border-radius: var(--radius-pill);
@@ -4470,7 +4452,8 @@ a {
   }
 
   .work-tag,
-  .exp-tags span {
+  .exp-tags span,
+  .case-info-tags .work-tag {
     height: 32px;
     padding: 0 12px;
     font-size: 13px;
