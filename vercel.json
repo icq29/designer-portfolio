@@ -28,6 +28,26 @@
       "source": "/litte-case.html",
       "destination": "/litte-case",
       "permanent": false
+    },
+    {
+      "source": "/myvms-case.html",
+      "destination": "/myvms-case",
+      "permanent": false
+    },
+    {
+      "source": "/suvvy-case.html",
+      "destination": "/suvvy-case",
+      "permanent": false
+    },
+    {
+      "source": "/alloca-case.html",
+      "destination": "/alloca-case",
+      "permanent": false
+    },
+    {
+      "source": "/rmgroup-case.html",
+      "destination": "/rmgroup-case",
+      "permanent": false
     }
   ],
   "rewrites": [
@@ -42,6 +62,22 @@
     {
       "source": "/litte-case",
       "destination": "/litte-case.html"
+    },
+    {
+      "source": "/myvms-case",
+      "destination": "/myvms-case.html"
+    },
+    {
+      "source": "/suvvy-case",
+      "destination": "/suvvy-case.html"
+    },
+    {
+      "source": "/alloca-case",
+      "destination": "/alloca-case.html"
+    },
+    {
+      "source": "/rmgroup-case",
+      "destination": "/rmgroup-case.html"
     }
   ],
   "git": {

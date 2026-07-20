@@ -405,7 +405,62 @@ body {
   object-position: center;
 }
 
+/* Suvvy cover: full-width background image with the UI screenshot on top */
+/* Suvvy cover — Figma 955:13595 (1920 × 292): bg image,
+
+pt-52 / px-52,
+
+UI screen 1211 × 240 centered and flush to the bottom edge. */
+.case-cover--suvvy {
+  background: url("/case-cover/suvvy-cover-bg.webp") center / cover no-repeat;
+  /* 52px (Figma) on desktop, easing down to the tgpost cover's 42px / 24px as the screen narrows */
+  padding: clamp(42px, 3.61vw, 52px) clamp(24px, 3.61vw, 52px) 0;
+}
+
+.case-cover--suvvy .case-cover-frame {
+  width: min(1211px, 100%);
+  aspect-ratio: 1211 / 240;
+  border-radius: 0;
+}
+
+/* Alloca cover — Figma 898:5776 (1920 × 292): gradient bg, pt-14 / px-52,
+   UI screen 989 × 278 (cards on a transparent bg) centered and flush to the bottom. */
+.case-cover--alloca {
+  background: url("/case-cover/alloca-cover-bg.webp") center / cover no-repeat;
+  /* Figma pt-14 / px-52 on desktop, easing down as the screen narrows */
+  padding: clamp(8px, 1.09vw, 14px) clamp(24px, 3.61vw, 52px) 0;
+}
+
+.case-cover--alloca .case-cover-frame {
+  width: min(989px, 100%);
+  aspect-ratio: 989 / 278;
+  border-radius: 0;
+}
+
+/* RM-Group cover — Figma 898:4610 (1920 × 292): bg image, pt-42 / px-52,
+   UI screen 1118 × 250 centered and flush to the bottom edge. */
+.case-cover--rmgroup {
+  background: url("/case-cover/rmgroup-cover-bg.webp") center / cover no-repeat;
+  padding: clamp(24px, 3.61vw, 42px) clamp(24px, 3.61vw, 52px) 0;
+}
+
+.case-cover--rmgroup .case-cover-frame {
+  width: min(1118px, 100%);
+  aspect-ratio: 1118 / 250;
+  border-radius: 0;
+}
+
 .case-title.case-title--litte {
+  width: 824px;
+  max-width: 100%;
+}
+
+.case-title.case-title--suvvy {
+  width: 958px;
+  max-width: 100%;
+}
+
+.case-title.case-title--alloca {
   width: 824px;
   max-width: 100%;
 }
@@ -497,6 +552,33 @@ body {
   align-items: center;
   gap: 42px 52px;
   width: 100%;
+}
+
+/* Suvvy info — Figma 858:286: tags stacked above the role,
+
+no dividers,
+
+gap 42px */
+.case-info--suvvy {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 42px;
+}
+
+.case-info--suvvy .case-info-block {
+  width: 100%;
+}
+
+/* Figma tag: 42px tall,
+
+18px side padding,
+
+Manrope Regular.
+   Double class beats the narrow-viewport .work-tag overrides. */
+.case-info.case-info--suvvy .work-tag {
+  height: 42px;
+  padding: 0 18px;
+  font-weight: 400;
 }
 
 .case-info-tags {
@@ -821,6 +903,17 @@ body {
   overflow: hidden;
 }
 
+/* Suvvy lenta has 4 cells,
+
+not 7 — resize the track so it loops with no empty gap */
+.case-lenta--suvvy,
+
+.case-lenta--alloca {
+  --lenta-track-inner: calc(
+    958px + var(--lenta-slide-gap) + 490px + var(--lenta-slide-gap) + 636px + var(--lenta-slide-gap) + 478px
+  );
+}
+
 @keyframes case-lenta-marquee {
   from {
     transform: translateX(0);
@@ -972,6 +1065,51 @@ body {
   object-fit: cover;
   object-position: top center;
   pointer-events: none;
+}
+
+/* Suvvy demo — Figma 858:386: light-blue block,
+
+52px top/bottom,
+
+1680 × 1012 screen */
+.case-demo.case-demo--suvvy {
+  background: #f7faff;
+  padding: clamp(24px, 3.61vw, 52px) clamp(24px, 3.61vw, 52px);
+}
+
+/* Alloca demo — Figma 898:5888: dark block, 14px top / 0 bottom */
+.case-demo.case-demo--alloca {
+  background: #1C2124;
+  padding: 14px clamp(24px, 3.61vw, 52px) 0;
+}
+
+.case-demo--suvvy .case-demo-inner,
+
+.case-demo--alloca .case-demo-inner {
+  width: min(1680px, 100%);
+  aspect-ratio: 1680 / 1012;
+}
+
+.case-demo--suvvy .case-demo-img,
+
+.case-demo--alloca .case-demo-img {
+  object-position: center;
+}
+
+/* RM-Group demo — Figma 898:4731: full-bleed bg photo, 52px top/left/right, 0 bottom,
+   screen 1680 × 841 centered, flush to bottom */
+.case-demo.case-demo--rmgroup {
+  background: url("/case-demo/rmgroup-demo-bg.webp") center / cover no-repeat;
+  padding: clamp(24px, 3.61vw, 52px) clamp(24px, 3.61vw, 52px) 0;
+}
+
+.case-demo--rmgroup .case-demo-inner {
+  width: min(1680px, 100%);
+  aspect-ratio: 1680 / 841;
+}
+
+.case-demo--rmgroup .case-demo-img {
+  object-position: center;
 }
 
 /* Litte Mobile demo: gradient background + catalog screen, 1:1 with Figma */
@@ -1273,6 +1411,119 @@ body {
 }
 
 /* Litte Mobile: Figma image proportions for mobile blocks */
+/* Suvvy mobile cards — Figma 858:460: two 834 × 586 cards,
+
+images 448×933 / 402×956
+   pinned to the top with a 52px offset. All as a share of the card width. */
+.case-mobile-cards--suvvy,
+
+.case-mobile-cards--alloca {
+  align-items: flex-start;
+}
+
+.case-mobile-cards--suvvy .case-mobile-card {
+  background: #f7faff;
+  aspect-ratio: 834 / 586;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.case-mobile-cards--suvvy .case-mobile-card-media--left {
+  width: 53.72%; /* 448 / 834 */
+  aspect-ratio: 448 / 933;
+  margin-top: 6.24%; /* 52 / 834 */
+}
+
+.case-mobile-cards--suvvy .case-mobile-card-media--right {
+  width: 48.2%; /* 402 / 834 */
+  aspect-ratio: 402 / 956;
+  margin-top: 6.24%;
+}
+
+/* Alloca mobile cards — Figma 898:5953: two 834×644 dark cards,
+   image 370 wide pinned 52px from the top, horizontally centered (px-82),
+   top-anchored & clipped at bottom. Padding stays 0 on the card itself —
+   its % would resolve against the flex ROW (card + gap + card), not the
+   card's own width. Instead the offset lives on the image, whose containing
+   block is the card, so the % is correctly card-relative (matches suvvy). */
+.case-mobile-cards--alloca .case-mobile-card--left {
+  background: #23282c;
+  aspect-ratio: 834 / 644;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.case-mobile-cards--alloca .case-mobile-card--right {
+  background: #1d2124;
+  aspect-ratio: 834 / 644;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.case-mobile-cards--alloca .case-mobile-card-media--left {
+  width: 44.36%; /* 370 / 834 */
+  aspect-ratio: 370 / 771;
+  margin-top: 6.24%; /* 52 / 834 */
+}
+
+.case-mobile-cards--alloca .case-mobile-card-media--right {
+  width: 44.36%; /* 370 / 834 */
+  aspect-ratio: 370 / 879;
+  margin-top: 6.24%; /* 52 / 834 */
+}
+
+/* Suvvy mobile demo — Figma 858:468: grey block,
+
+32px radius,
+
+screen 1576 × 648 */
+.case-mobile-demo.case-mobile-demo--suvvy {
+  background: #f0f3f7;
+  border-radius: clamp(12px, 1.9vw, 32px);
+  padding: clamp(24px, 3.1vw, 52px) clamp(24px, 3.1vw, 52px) 0;
+  justify-content: flex-start;
+}
+
+.case-mobile-demo--suvvy .case-mobile-demo-inner {
+  width: min(1576px, 100%);
+  aspect-ratio: 1576 / 648;
+  border-radius: clamp(10px, 1.6vw, 27px) clamp(10px, 1.6vw, 27px) 0 0;
+}
+
+/* Alloca mobile demo — Figma 898:5961: dark block, 52px padding on all
+   sides (image fits exactly, no bottom clip), 1440 × 850 screen */
+.case-mobile-demo.case-mobile-demo--alloca {
+  background: #23282c;
+  border-radius: clamp(6px, 0.625vw, 12px);
+  padding: clamp(24px, 3.1vw, 52px);
+  justify-content: center;
+}
+
+.case-mobile-demo--alloca .case-mobile-demo-inner {
+  width: min(1440px, 100%);
+  aspect-ratio: 1440 / 850;
+  border-radius: 0;
+}
+
+/* RM-Group mobile demo — Figma 898:5458: full-bleed bg photo,
+   pt-82 / px-102, screen ~1476 × 643 top-anchored, clipped at bottom */
+.case-mobile-demo.case-mobile-demo--rmgroup {
+  background: url("/case-demo/rmgroup-demo-bg.webp") center / cover no-repeat;
+  padding: clamp(40px, 4.88vw, 82px) clamp(48px, 6.07vw, 102px) 0;
+  justify-content: flex-start;
+}
+
+.case-mobile-demo--rmgroup .case-mobile-demo-inner {
+  width: min(1476px, 100%);
+  aspect-ratio: 4096 / 1786;
+  border-radius: 0;
+}
+
+/* Suvvy results — Figma 858:443: intro runs up to 1060px */
+.case-results--suvvy .case-results-intro {
+  max-width: 1060px;
+}
+
 /* Both card images sized as a share of the (equal-width) card, exactly as in
    Figma — so they shrink together proportionally at every width.
    Top padding as % of card width recreates Figma's vertical offset (cards → 581 @ 834). */
@@ -1375,6 +1626,68 @@ body {
   object-fit: cover;
 }
 
+/* Suvvy demo-calendar — Figma 858:438: light-blue block,
+
+52px padding,
+
+1680 × 1012 screen */
+.case-demo-calendar--suvvy {
+  height: auto;
+  box-sizing: border-box;
+  background: #f7faff;
+  padding: clamp(24px, 3.61vw, 52px);
+}
+
+.case-demo-calendar--suvvy .case-demo-calendar-inner {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  margin: 0 auto;
+  width: min(1680px, 100%);
+  height: auto;
+  aspect-ratio: 1680 / 1012;
+}
+
+/* RM-Group demo-calendar — Figma 898:5428: full-bleed bg photo, 52px padding
+   uniform, screen 1680 × 1012 centered (same bg image as case-demo--rmgroup) */
+.case-demo-calendar.case-demo-calendar--rmgroup {
+  height: auto;
+  box-sizing: border-box;
+  background: url("/case-demo/rmgroup-demo-bg.webp") center / cover no-repeat;
+  padding: clamp(24px, 3.61vw, 52px);
+}
+
+.case-demo-calendar--rmgroup .case-demo-calendar-inner {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  margin: 0 auto;
+  width: min(1680px, 100%);
+  height: auto;
+  aspect-ratio: 1680 / 1012;
+}
+
+/* Alloca demo-calendar — Figma 898:5932: dark block, 52px padding, 1328 × 1180 screen */
+.case-demo-calendar--alloca {
+  height: auto;
+  box-sizing: border-box;
+  background: #1c2124;
+  padding: clamp(24px, 3.61vw, 52px);
+}
+
+.case-demo-calendar--alloca .case-demo-calendar-inner {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  margin: 0 auto;
+  width: min(1328px, 100%);
+  height: auto;
+  aspect-ratio: 1328 / 1180;
+}
+
 /* Litte Mobile: tall product-page screen, full image as in Figma */
 .case-demo-calendar--litte {
   height: auto;
@@ -1396,6 +1709,168 @@ body {
 .case-components-block {
   width: 100%;
   overflow: visible;
+}
+
+/* Suvvy components — Figma 858:388 (block 1680: create 822 + gap 12 + column 846).
+   Everything is a share of the block width, so Figma proportions hold at any size. */
+.case-components-block--suvvy .case-components-create,
+.case-components-block--alloca .case-components-create {
+  flex: 0 1 calc((100% - 12px) * 822 / 1668);
+  aspect-ratio: auto;
+  background: #f7faff;
+  border: none;
+  padding: 0;
+}
+
+.case-components-block--suvvy .case-components-column,
+
+.case-components-block--alloca .case-components-column {
+  flex: 0 1 calc((100% - 12px) * 846 / 1668);
+}
+
+/* 333 / 822 wide, offset 62 / 822 from the top — % keeps it in step with the card */
+.case-components-block--suvvy .case-components-create-img,
+.case-components-block--alloca .case-components-create-img {
+  width: 40.51%;
+  max-width: none;
+  aspect-ratio: 333 / 549;
+  margin-top: 7.54%;
+  align-self: flex-start;
+}
+
+.case-components-block--suvvy .case-components-slot,
+
+.case-components-block--alloca .case-components-slot {
+  flex: 0 0 auto;
+  aspect-ratio: 846 / 238;
+  background: #f7faff;
+  padding: 0 0 0 3.78%; /* 32 / 846 */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Figma crops this strip on the right: 1360 in an 814 box (846 − 32 padding) */
+.case-components-block--suvvy .case-components-slot-img,
+.case-components-block--alloca .case-components-slot-img {
+  width: 167.08%;
+  max-width: none;
+  aspect-ratio: 1360 / 182;
+}
+
+.case-components-block--suvvy .case-components-card,
+.case-components-block--alloca .case-components-card {
+  flex: 0 0 auto;
+  aspect-ratio: 846 / 361;
+  background: #f7faff;
+  padding: 3.78% 0 0; /* 32 / 846 */
+  align-items: flex-start;
+}
+
+.case-components-block--suvvy .case-components-card-img,
+
+.case-components-block--alloca .case-components-card-img {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 846 / 345;
+}
+
+/* RM-Group components — Figma 898:5246 (block 1680: create 822 + gap 12 + column 846) */
+.case-components-block--rmgroup .case-components-create {
+  flex: 0 1 calc((100% - 12px) * 822 / 1668);
+  /* Unlike suvvy's create (image fills exactly to 611), this image (684 + 62
+     margin-top = 746) overflows the 611 box and must be clipped, so height
+     needs its own explicit ratio instead of following the content. */
+  aspect-ratio: 822 / 611;
+  background: #fafbff;
+  border: none;
+  padding: 0;
+}
+
+.case-components-block--rmgroup .case-components-column {
+  flex: 0 1 calc((100% - 12px) * 846 / 1668);
+}
+
+/* 350 / 822 wide, offset 62 / 822 from the top, horizontally auto-centered */
+.case-components-block--rmgroup .case-components-create-img {
+  width: 42.58%;
+  max-width: none;
+  aspect-ratio: 350 / 684;
+  margin-top: 7.54%; /* 62 / 822 */
+  align-self: flex-start;
+}
+
+.case-components-block--rmgroup .case-components-slot {
+  flex: 0 0 auto;
+  aspect-ratio: 846 / 238;
+  background: #fafbff;
+  padding: 3.78% 0 3.78% 3.78%; /* 32 / 846 on top/bottom/left, 0 right */
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.case-components-block--rmgroup .case-components-slot-img {
+  /* 782 / (846 − 32 padding-left) — % resolves against the padded content box */
+  width: 96.07%;
+  max-width: none;
+  aspect-ratio: 782 / 131;
+}
+
+.case-components-block--rmgroup .case-components-card {
+  flex: 0 0 auto;
+  aspect-ratio: 846 / 361;
+  background: #fafbff;
+  padding: 3.78% 0 0; /* 32 / 846 */
+  align-items: flex-start;
+}
+
+.case-components-block--rmgroup .case-components-card-img {
+  width: 92.44%; /* 782 / 846 */
+  max-width: none;
+  aspect-ratio: 782 / 632;
+}
+
+/* Alloca components — Figma 898:5889:
+   create 822 full-bleed on dark bg; slot 702×186 centered in dark card;
+   card 702×462 anchored at top inside 846×361 with pt/px 32, bottom clipped */
+.case-components-block--alloca .case-components-create {
+  background: #1c2124;
+  aspect-ratio: 822 / 611;
+}
+
+.case-components-block--alloca .case-components-create-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 822 / 611;
+  margin-top: 0;
+  align-self: stretch;
+  object-fit: cover;
+}
+
+.case-components-block--alloca .case-components-slot {
+  background: #1d2124;
+  padding: 3.07%; /* 26 / 846 */
+  justify-content: center;
+}
+
+.case-components-block--alloca .case-components-slot-img {
+  /* 702 / (846 − 2×26 padding) — % resolves against the padded content box */
+  width: 88.41%;
+  aspect-ratio: 702 / 186;
+  object-fit: contain;
+}
+
+.case-components-block--alloca .case-components-card {
+  background: #1d2124;
+  padding: 3.78% 3.78% 0; /* 32 / 846 */
+  align-items: flex-start;
+}
+
+.case-components-block--alloca .case-components-card-img {
+  /* 702 / (846 − 2×32 padding) — % resolves against the padded content box */
+  width: 89.77%;
+  aspect-ratio: 702 / 462;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .case-components-layout {
@@ -1492,7 +1967,7 @@ body {
 
 /* Litte Mobile components: grey create block + Figma photos (behavior unchanged) */
 /* Figma is a fixed 1680px composition: heights stay fixed (create 509, slot 140,
-   card 357 — create's height comes from its 385px image + 62px padding), widths
+   card 357 — create height comes from its 385px image + 62px padding), widths
    scale responsively. So drive heights, not aspect-ratios. */
 .case-components-block--litte .case-components-create {
   background: #f1f1f1;
@@ -1567,6 +2042,22 @@ body {
   line-height: 1.5;
   letter-spacing: 0.3px;
   color: var(--color-grey);
+}
+
+/* Suvvy — Figma 858:398: subtitle runs up to 1086px */
+.case-design-system-text--suvvy .case-design-system-text-subtitle {
+  width: 1086px;
+  max-width: 100%;
+}
+
+.case-design-system-text--rmgroup .case-design-system-text-subtitle {
+  width: 868px;
+  max-width: 100%;
+}
+
+.case-design-system-text--alloca .case-design-system-text-subtitle {
+  width: 826px;
+  max-width: 100%;
 }
 
 .case-guidelines {
@@ -1675,7 +2166,6 @@ body {
   }
 }
 
-
 .case-guidelines-swatch {
   flex: 1 1 0;
   min-width: 0;
@@ -1740,6 +2230,143 @@ body {
   height: 1px;
   background: #d9d9d9;
   display: block;
+}
+
+/* Suvvy guidelines — Figma 858:399: light-blue block,
+
+4 swatches,
+
+Onest specimen */
+.case-guidelines--suvvy .case-guidelines-inner {
+  background: #f7faff;
+}
+
+.case-guidelines--suvvy .case-guidelines-swatch--primary-900 {
+  background: #11253e;
+  color: var(--color-white);
+}
+
+.case-guidelines--suvvy .case-guidelines-swatch--secondary-50 {
+  background: #e8ecf3;
+  color: #252525;
+}
+
+.case-guidelines--suvvy .case-guidelines-swatch--neutral-75 {
+  background: #f0f4fa;
+  border: none;
+  color: #252525;
+}
+
+.case-guidelines--suvvy .case-guidelines-swatch--neutral-50,
+
+.case-guidelines--alloca .case-guidelines-swatch--neutral-50 {
+  background: var(--color-white);
+  color: #252525;
+}
+
+.case-guidelines--suvvy .case-guidelines-family,
+
+.case-guidelines--suvvy .case-guidelines-weights p,
+
+.case-guidelines--suvvy .case-guidelines-samples p {
+  font-family: "Onest", var(--font-tags);
+}
+
+/* Alloca guidelines — Figma 898:5897: grey block, 4 swatches, Montserrat specimen */
+.case-guidelines--alloca .case-guidelines-inner {
+  background: #f1f1f1;
+}
+
+.case-guidelines--alloca .case-guidelines-swatch--black-900 {
+  background: #1d2124;
+  color: var(--color-white);
+}
+
+.case-guidelines--alloca .case-guidelines-swatch--green-500 {
+  background: #52ff00;
+  color: #252525;
+}
+
+.case-guidelines--alloca .case-guidelines-swatch--green-100 {
+  background: #818c85;
+  color: #252525;
+}
+
+.case-guidelines--alloca .case-guidelines-family,
+
+.case-guidelines--alloca .case-guidelines-weights p,
+
+.case-guidelines--alloca .case-guidelines-samples p {
+  font-family: "Montserrat", var(--font-tags);
+}
+
+/* RM-Group guidelines — Figma 898:5393: light block, 4 swatches, Inter specimen */
+.case-guidelines--rmgroup .case-guidelines-inner {
+  background: #fafbff;
+}
+
+/* Figma's swatch fills don't match their own printed hex labels (a mistake
+   baked into the design file) — reproducing the fills as rendered, not the
+   mislabeled text: label says #11253E, actual fill is #1d1f21, etc. */
+.case-guidelines--rmgroup .case-guidelines-swatch--primary-500 {
+  background: #1d1f21;
+  color: var(--color-white);
+}
+
+.case-guidelines--rmgroup .case-guidelines-swatch--neutral-75 {
+  background: #7a7a7a;
+  border: none;
+  color: #252525;
+}
+
+.case-guidelines--rmgroup .case-guidelines-swatch--secondary-50 {
+  background: #f1f1f1;
+  color: #252525;
+}
+
+.case-guidelines--rmgroup .case-guidelines-swatch--neutral-50 {
+  background: var(--color-white);
+  color: #252525;
+}
+
+.case-guidelines--rmgroup .case-guidelines-family,
+
+.case-guidelines--rmgroup .case-guidelines-weights p,
+
+.case-guidelines--rmgroup .case-guidelines-samples p {
+  font-family: "Inter", var(--font-tags);
+}
+
+.case-guidelines--suvvy .case-guidelines-weights p:nth-child(1),
+
+.case-guidelines--alloca .case-guidelines-weights p:nth-child(1),
+
+.case-guidelines--rmgroup .case-guidelines-weights p:nth-child(1) {
+  font-weight: 400;
+}
+
+.case-guidelines--suvvy .case-guidelines-weights p:nth-child(2),
+
+.case-guidelines--alloca .case-guidelines-weights p:nth-child(2),
+
+.case-guidelines--rmgroup .case-guidelines-weights p:nth-child(2) {
+  font-weight: 500;
+}
+
+.case-guidelines--suvvy .case-guidelines-weights p:nth-child(3),
+
+.case-guidelines--alloca .case-guidelines-weights p:nth-child(3),
+
+.case-guidelines--rmgroup .case-guidelines-weights p:nth-child(3) {
+  font-weight: 600;
+}
+
+.case-guidelines--suvvy .case-guidelines-weights p:nth-child(4),
+
+.case-guidelines--alloca .case-guidelines-weights p:nth-child(4),
+
+.case-guidelines--rmgroup .case-guidelines-weights p:nth-child(4) {
+  font-weight: 700;
 }
 
 /* Litte: typography specimen uses Gilroy */
@@ -1856,13 +2483,18 @@ body {
   object-fit: cover;
 }
 
+/* Suvvy/Alloca design-photo — Figma 894:3429 (1680 × 1182) */
+.case-design-photo--suvvy .case-design-photo-img,
+.case-design-photo--alloca .case-design-photo-img {
+  aspect-ratio: 1680 / 1182;
+}
+
 /* Litte: show the full design-photo at its natural ratio, never cropped */
 .case-design-photo--litte .case-design-photo-img {
   aspect-ratio: auto;
   height: auto;
   object-fit: contain;
 }
-
 
 .header-brand {
   width: 176px;
@@ -2497,7 +3129,8 @@ a {
   min-width: 0;
 }
 
-.work-card-image-link {
+.work-card-image-link,
+.work-card-image-wrap {
   display: block;
   width: 100%;
   overflow: hidden;
@@ -2564,6 +3197,15 @@ a {
   font-weight: 500;
   letter-spacing: -0.02em;
   line-height: 1;
+}
+
+/* Global `a` sets its own font/color, so re-inherit the h3 typography. */
+.work-card-title-link {
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-decoration: none;
+  outline-offset: 4px;
 }
 
 .work-card-copy p {
@@ -3138,7 +3780,6 @@ a {
     object-fit: contain;
   }
 
-
   .case-guidelines-swatch {
     padding: 24px;
   }
@@ -3403,6 +4044,13 @@ a {
     flex-direction: column;
   }
 
+  /* Stacked: the cross axis is now horizontal, so stretch the cards full-width
+     (flex-start is only needed in the row layout, to keep their aspect-ratio) */
+  .case-mobile-cards--suvvy,
+  .case-mobile-cards--alloca {
+    align-items: stretch;
+  }
+
   .case-mobile-demo {
     padding: 24px 24px 0;
   }
@@ -3476,7 +4124,6 @@ a {
     line-height: 120%;
     letter-spacing: -0.04em;
   }
-
 
   .case-task {
     flex-direction: column;
