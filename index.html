@@ -88,12 +88,12 @@
               <img class="hero-avatar" src="/index-ui/hero-avatar.webp" alt="Stanislav Ignatenko" width="77" height="92" fetchpriority="high" decoding="async" />
               <div>
                 <p class="hero-name">Stanislav Ignatenko</p>
-                <p class="hero-location">Mogilev, Belarus</p>
+                <p class="hero-location">Worldwide</p>
               </div>
             </div>
-            <p class="hero-time" aria-label="Time zone Minsk, Belarus">
+            <p class="hero-time" aria-label="Time zone">
               <span class="hero-time-label">TIME ZONE</span>
-              <span id="minsk-time">--:--</span>
+              <span id="hero-time-value">--:--</span>
             </p>
           </div>
         </section>
@@ -469,29 +469,32 @@
       })();
 
       (function () {
-        var timeNode = document.getElementById("minsk-time");
+        var timeNode = document.getElementById("hero-time-value");
         if (!timeNode) return;
 
-        function formatMinskTime() {
+        // Clock runs one hour ahead of Minsk (which stays on UTC+3 year-round)
+        var OFFSET_MS = 60 * 60 * 1000;
+
+        function formatHeroTime() {
           return new Intl.DateTimeFormat("en-GB", {
             timeZone: "Europe/Minsk",
             hour: "2-digit",
             minute: "2-digit",
             hour12: false
-          }).format(new Date());
+          }).format(new Date(Date.now() + OFFSET_MS));
         }
 
-        function updateMinskTime() {
-          timeNode.textContent = formatMinskTime();
+        function updateHeroTime() {
+          timeNode.textContent = formatHeroTime();
         }
 
-        updateMinskTime();
+        updateHeroTime();
 
         var now = new Date();
         var msToNextMinute = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
         setTimeout(function () {
-          updateMinskTime();
-          setInterval(updateMinskTime, 60000);
+          updateHeroTime();
+          setInterval(updateHeroTime, 60000);
         }, Math.max(msToNextMinute, 0));
       })();
 
