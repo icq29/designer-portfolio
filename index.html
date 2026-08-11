@@ -88,7 +88,7 @@
               <img class="hero-avatar" src="/index-ui/hero-avatar.webp" alt="Stanislav Ignatenko" width="77" height="92" fetchpriority="high" decoding="async" />
               <div>
                 <p class="hero-name">Stanislav Ignatenko</p>
-                <p class="hero-location">Worldwide</p>
+                <p class="hero-location">Armenia, Yerevan</p>
               </div>
             </div>
             <p class="hero-time" aria-label="Time zone">
@@ -472,16 +472,13 @@
         var timeNode = document.getElementById("hero-time-value");
         if (!timeNode) return;
 
-        // Clock runs one hour ahead of Minsk (which stays on UTC+3 year-round)
-        var OFFSET_MS = 60 * 60 * 1000;
-
         function formatHeroTime() {
           return new Intl.DateTimeFormat("en-GB", {
-            timeZone: "Europe/Minsk",
+            timeZone: "Asia/Yerevan",
             hour: "2-digit",
             minute: "2-digit",
             hour12: false
-          }).format(new Date(Date.now() + OFFSET_MS));
+          }).format(new Date());
         }
 
         function updateHeroTime() {
